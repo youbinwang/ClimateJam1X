@@ -66,6 +66,6 @@ public class Interact : MonoBehaviour
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
-        FindObjectOfType<StarInventory>().getStarCount(); // gets star count to the inventory 
+        FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
     }
 }

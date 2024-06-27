@@ -49,12 +49,12 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("collided");
+        Debug.Log("Collided");
         if (!isDragging) //makes sure the star doesn't snap immediately on collision
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
-            other.gameObject.GetComponent<StarObject>().showConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+            other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
             Debug.Log("Connections Shown");
         }
     }
@@ -65,7 +65,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
-            other.gameObject.GetComponent<StarObject>().showConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+            other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
             Debug.Log("Connections Shown");
         }
     }

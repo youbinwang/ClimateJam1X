@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -316,6 +316,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123633192}
   m_CullTransparentMesh: 1
+--- !u!114 &203558284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5806930721971278857, guid: d7acc9a32a7539c40a0da96fa13075c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1692974815}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &216879327
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,6 +340,7 @@ GameObject:
   - component: {fileID: 216879331}
   - component: {fileID: 216879330}
   - component: {fileID: 216879329}
+  - component: {fileID: 216879332}
   m_Layer: 5
   m_Name: STAR SPAWNER
   m_TagString: Untagged
@@ -404,6 +417,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216879327}
   m_CullTransparentMesh: 1
+--- !u!114 &216879332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216879327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450921e138d426049bf9cc9ac44e7317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invstarCount: 99
+  uiSpawnPos: {x: 0, y: 0}
+  starCountUIText: {fileID: 203558284}
+  miniGameUIText: {fileID: 203558284}
+  screenPanel: {fileID: 832174499}
+  starPrefab: {fileID: 1493999529}
 --- !u!1 &263401800
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +643,7 @@ GameObject:
   - component: {fileID: 304941712}
   - component: {fileID: 304941711}
   m_Layer: 5
-  m_Name: background
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.010604, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304941711
@@ -2332,7 +2363,7 @@ GameObject:
   - component: {fileID: 1342926307}
   - component: {fileID: 1342926306}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StarsCollect UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2710,6 +2741,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490961006}
   m_CullTransparentMesh: 1
+--- !u!1 &1493999529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6558739765332170154, guid: d7acc9a32a7539c40a0da96fa13075c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1692974815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1579884165
 GameObject:
   m_ObjectHideFlags: 0

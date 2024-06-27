@@ -8,7 +8,7 @@ public class StarObject : MonoBehaviour
 
     [SerializeField] public GameObject[] connections; // array of connections to set active when dragged into place
 
-    public void showConnections() // shows the connections once the star is snapped
+    public void ShowConnections() // shows the connections once the star is snapped
     {
         for (int i = 0; i < connections.Length; i++)
         {
