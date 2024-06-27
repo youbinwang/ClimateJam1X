@@ -59,7 +59,7 @@ public class Interact : MonoBehaviour
     {
         Debug.Log("Dialogue triggered.");
         Character dialogueScript = other.gameObject.GetComponent<Character>();
-        dialogueScript.showDialogue();
+        dialogueScript.ShowDialogue();
     }
 
     void CollectStar()
