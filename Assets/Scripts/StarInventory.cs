@@ -29,7 +29,7 @@ public class StarInventory : MonoBehaviour
 
     public void getStarCount() // run this when refreshing inventory/add a call to this method in the interact script to update this with the UI 
     {
-       invstarCount = FindObjectOfType<interact>().starCount; // gets starCount from interact script
+       invstarCount = FindObjectOfType<Interact>().starCount; // gets starCount from interact script
         // sets the text to the UI in scene
        starCountUItext.text = invstarCount.ToString();
        minigameUItext.text = invstarCount.ToString();
@@ -48,7 +48,7 @@ public class StarInventory : MonoBehaviour
             GameObject newStar = Instantiate(starPrefab, UIspawnPos, Quaternion.identity, screenPanel); // the game object that gets spawned in 
             // subtracts the star count
             invstarCount--;
-            FindObjectOfType<interact>().starCount--;
+            FindObjectOfType<Interact>().starCount--;
         }
     }
 

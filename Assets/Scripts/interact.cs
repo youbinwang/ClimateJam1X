@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class interact : MonoBehaviour
+public class Interact : MonoBehaviour
 {
     public int starCount;
 
@@ -25,12 +25,12 @@ public class interact : MonoBehaviour
         {
             if (other.gameObject.CompareTag("NPC"))
             {
-                dialogue(other);
+                Dialogue(other);
             }
 
             if (other.gameObject.CompareTag("Star"))
             {
-                collectStar();
+                CollectStar();
                 other.gameObject.SetActive(false);
             }
         }
@@ -43,26 +43,26 @@ public class interact : MonoBehaviour
         {
             if (other.gameObject.CompareTag("NPC"))
             {
-                dialogue(other);
+                Dialogue(other);
             }
 
             if (other.gameObject.CompareTag("Star"))
             {
-                collectStar();
+                CollectStar();
                 other.gameObject.SetActive(false);
             }
         }
     }
 
     // get the dialogueScript of the object that player collided 
-    private void dialogue(Collider other)
+    private void Dialogue(Collider other)
     {
         Debug.Log("Dialogue triggered.");
         Character dialogueScript = other.gameObject.GetComponent<Character>();
         dialogueScript.showDialogue();
     }
 
-    void collectStar()
+    void CollectStar()
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
