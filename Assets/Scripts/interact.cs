@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class interact : MonoBehaviour
 {
-    int starCount;
+    public int starCount;
 
     // Start is called before the first frame update
     void Start()
@@ -63,5 +63,6 @@ public class interact : MonoBehaviour
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
+        FindObjectOfType<StarInventory>().getStarCount(); // gets star count to the inventory 
     }
 }
