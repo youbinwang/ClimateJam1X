@@ -10,17 +10,7 @@ public class DialogueObject : ScriptableObject {
     
     [TextArea(15, 20)]
     [SerializeField] public string nodeText; // The body text of the dialogue node 
-   
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
     public string getNodeText() // passes the node's text
     {
         return nodeText;
