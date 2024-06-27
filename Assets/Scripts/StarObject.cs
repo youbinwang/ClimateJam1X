@@ -18,5 +18,13 @@ public class StarObject : MonoBehaviour
         
     }
 
+    public void showConnections() // shows the connections once the star is snapped
+    {
+        for (int i = 0; i < connections.Length; i++)
+        {
+            connections[i].gameObject.SetActive(true);
+            Debug.Log("Setting connection " + i + "active");
 
+        }
+    }
 }
