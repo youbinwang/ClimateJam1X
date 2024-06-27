@@ -20,7 +20,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
     // Update is called once per frame
     void Update()
     {
-        
+       // Debug.Log("isDragging: " + isDragging);
     }
 
     public void OnDrag(PointerEventData eventData) // Allows dragging around the node.
