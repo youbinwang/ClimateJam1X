@@ -64,6 +64,9 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         if (!isDragging)
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
+            Debug.Log("Snapped");
+            other.gameObject.GetComponent<StarObject>().showConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+            Debug.Log("Connections Shown");
         }
     }
 
