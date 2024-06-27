@@ -2455,7 +2455,7 @@ MonoBehaviour:
   moveSpeed: 4
   jumpForce: 8
   gravityMultiplier: 2.75
-  rb: {fileID: 0}
+  rb: {fileID: 1788008617}
   groundCheckDistance: 1
   groundLayer:
     serializedVersion: 2

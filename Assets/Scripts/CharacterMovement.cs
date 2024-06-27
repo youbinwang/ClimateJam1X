@@ -25,6 +25,10 @@ public class CharacterMovements : MonoBehaviour
 
     void Update()
     {
+        // Ground Check
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
+        Debug.DrawRay(transform.position, Vector3.down * groundCheckDistance, Color.red);
+        
         moveX = Input.GetAxis("Horizontal");
         
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -34,11 +38,7 @@ public class CharacterMovements : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        // Ground Check
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundLayer);
-        Debug.DrawRay(transform.position, Vector3.down * groundCheckDistance, Color.red);
-        
+    { 
         // Movement
         Vector3 velocity = rb.velocity;
         velocity.x = moveX * moveSpeed;
