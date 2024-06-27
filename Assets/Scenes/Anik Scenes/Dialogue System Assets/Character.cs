@@ -19,12 +19,13 @@ public class Character : MonoBehaviour
 
     void Start()
     {
+        hideDialouge();
         trackingInt = 0;
     }
 
     public void questDone() //things to do after the character's quest is complete
     {
-        trackingInt = 1; // switches the tracking int to 1
+        trackingInt = 1; // switches the tracking int to 1a
     }
 
     public void showDialogue() // called by farah's dialogue function. 

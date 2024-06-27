@@ -25,7 +25,7 @@ public class interact : MonoBehaviour
         {
             if (other.gameObject.CompareTag("NPC"))
             {
-                dialogue();
+                dialogue(other);
             }
 
             if (other.gameObject.CompareTag("Star"))
@@ -43,7 +43,7 @@ public class interact : MonoBehaviour
         {
             if (other.gameObject.CompareTag("NPC"))
             {
-                dialogue();
+                dialogue(other);
             }
 
             if (other.gameObject.CompareTag("Star"))
@@ -54,9 +54,12 @@ public class interact : MonoBehaviour
         }
     }
 
-    private void dialogue()
+    // get the dialogueScript of the object that player collided 
+    private void dialogue(Collider other)
     {
         Debug.Log("Dialogue triggered.");
+        Character dialogueScript = other.gameObject.GetComponent<Character>();
+        dialogueScript.showDialogue();
     }
 
     void collectStar()

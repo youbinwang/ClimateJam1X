@@ -8,7 +8,7 @@ public class CharacterMovements : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     public float gravityMultiplier = 2f; // Multiplier for gravity to make the fall faster
-    private Rigidbody rb;
+    public Rigidbody rb;
     private float moveX = 0f;
     private bool jump = false;
     
@@ -20,7 +20,7 @@ public class CharacterMovements : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        if(rb == null ) rb = GetComponent<Rigidbody>();
     }
 
     void Update()
