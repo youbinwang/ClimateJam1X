@@ -73,7 +73,7 @@ public class Character : MonoBehaviour
     public void NextState() { 
      if (dialogueActive) {
 
-            if (Input.GetKey(KeyCode.E) || Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <= AfterQuestDialogueObjects.Length)
                 {
