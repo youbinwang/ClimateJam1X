@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,6 +318,8 @@ MonoBehaviour:
   Dialogue: {fileID: 1985025344}
   CharacterName: {fileID: 1985025345}
   DialogueText: {fileID: 1985025346}
+  nextButton: {fileID: 0}
+  dialogueActive: 0
 --- !u!65 &174677162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -525,7 +527,7 @@ MonoBehaviour:
   moveSpeed: 4
   jumpForce: 8
   gravityMultiplier: 2.75
-  rb: {fileID: 2035597012}
+  rb: {fileID: 325661601}
   groundCheckDistance: 1
   groundLayer:
     serializedVersion: 2
@@ -616,6 +618,12 @@ PrefabInstance:
 --- !u!4 &325661600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2293304608422244361, guid: 95590599263e5364c809ddca42e07ea9,
+    type: 3}
+  m_PrefabInstance: {fileID: 325661599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &325661601 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 7753121058065837447, guid: 95590599263e5364c809ddca42e07ea9,
     type: 3}
   m_PrefabInstance: {fileID: 325661599}
   m_PrefabAsset: {fileID: 0}
@@ -1103,12 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &2035597012 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 7926464527349405388, guid: 95590599263e5364c809ddca42e07ea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 325661599}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2035597016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starCount: 0
+  ePopup: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
