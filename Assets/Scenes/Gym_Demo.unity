@@ -2508,6 +2508,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5806930721971278857, guid: d7acc9a32a7539c40a0da96fa13075c6,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -20.374878
+      objectReference: {fileID: 0}
     - target: {fileID: 6343854590492353952, guid: d7acc9a32a7539c40a0da96fa13075c6,
         type: 3}
       propertyPath: m_Name
