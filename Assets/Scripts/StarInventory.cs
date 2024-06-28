@@ -9,8 +9,8 @@ public class StarInventory : MonoBehaviour
 
     public int invstarCount; // star count for the inventory
     public Vector2 uiSpawnPos; // where we want it to spawn on the inventory
-    public TextMeshProUGUI starCountUIText; // UI text for overworld
-    public TextMeshProUGUI miniGameUIText; // UI text for constellation minigame
+    public TextMeshProUGUI starCountUIText; // UI text 
+   
 
     public RectTransform screenPanel; // a rect transform determining the size of the screen so UI objects can spawn on top of it. 
 
@@ -18,7 +18,7 @@ public class StarInventory : MonoBehaviour
 
     void Start()
     {
-        
+        starCountUIText.text = GetStarCount().ToString();
     }
 
     // Update is called once per frame
@@ -27,12 +27,12 @@ public class StarInventory : MonoBehaviour
         
     }
 
-    public void GetStarCount() // run this when refreshing inventory/add a call to this method in the interact script to update this with the UI 
+    public int GetStarCount() // run this when refreshing inventory/add a call to this method in the interact script to update this with the UI 
     {
        invstarCount = FindObjectOfType<Interact>().starCount; // gets starCount from interact script
         // sets the text to the UI in scene
         starCountUIText.text = invstarCount.ToString();
-        miniGameUIText.text = invstarCount.ToString();
+        return invstarCount;
     }
 
 
