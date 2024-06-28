@@ -37,7 +37,7 @@ public class StarInventory : MonoBehaviour
 
 
     // stuff that's relevant when the minigame is active
-    public void createDragStarOnClick(Vector3 mousePos) // have this ON CLICK for the star in UI
+    public void CreateDragStarOnClick(Vector3 mousePos) // have this ON CLICK for the star in UI
     {
         uiSpawnPos = mousePos;
 
