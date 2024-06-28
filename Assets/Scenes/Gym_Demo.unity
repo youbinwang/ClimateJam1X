@@ -669,6 +669,12 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &334860452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4779799020275950129, guid: f6d155c9abef02848b0c1d34153122c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 9064031842690301922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359107129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10780,9 +10786,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invstarCount: 99
   uiSpawnPos: {x: 0, y: 0}
-  starCountUIText: {fileID: 0}
+  starCountUIText: {fileID: 798928391}
   screenPanel: {fileID: 2235464758512271776}
-  starPrefab: {fileID: 0}
+  starPrefab: {fileID: 334860452}
 --- !u!1001 &8895297921852588358
 PrefabInstance:
   m_ObjectHideFlags: 0
