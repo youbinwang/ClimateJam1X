@@ -18,8 +18,7 @@ public class StarInventory : MonoBehaviour
 
     void Start()
     {
-        invstarCount = GetStarCount();
-        starCountUIText.text = invstarCount.ToString();
+        starCountUIText.text = GetStarCount().ToString();
     }
 
     // Update is called once per frame
