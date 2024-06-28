@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
@@ -15,12 +16,23 @@ public class Character : MonoBehaviour
 
     [SerializeField] private GameObject Dialogue; // SF for now in case we want to have custom textboxes but probably not lol 
     [SerializeField] private TextMeshProUGUI CharacterName;
-    [SerializeField] private TextMeshProUGUI DialogueText; 
+    [SerializeField] private TextMeshProUGUI DialogueText;
 
+    [SerializeField] public Button nextButton; // the "next button" for the dialogue
+    public bool dialogueActive;
     void Start()
     {
+       dialogueIndex = 0; // instantiate's index
         HideDialouge();
+        dialogueActive = false;
         trackingInt = 0;
+      
+
+    }
+
+    void Update()
+    {
+        NextState();
     }
 
     public void QuestDone() //things to do after the character's quest is complete
@@ -30,9 +42,11 @@ public class Character : MonoBehaviour
 
     public void ShowDialogue() // called by farah's dialogue function. 
     {
+
         dialogueIndex = 0; 
         PlayDialogue();
         Dialogue.gameObject.SetActive(true);
+        dialogueActive = true;
         
     }
 
@@ -40,7 +54,10 @@ public class Character : MonoBehaviour
     public void PlayDialogue() // played once the DIALOGUE function is called
     {
         CharacterName.text = Name; // sets the name 
-        if (trackingInt == 0)
+        if (trackingInt == 0 && dialogueIndex >= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex >= AfterQuestDialogueObjects.Length)
+        {
+            HideDialouge() ;
+        }else if (trackingInt == 0)
         {
             DialogueText.text = BeforeQuestDialogueObjects[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
         } else if (trackingInt == 1)
@@ -50,22 +67,34 @@ public class Character : MonoBehaviour
         // later i can add a typewriter text thing if needed!
     }
 
-    public void NextButton() // set this function to play when the button on the dialogue is clicked. 
-    {
-        if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <=AfterQuestDialogueObjects.Length) {
-            dialogueIndex++; // increases the index 
+   
+
+
+    public void NextState() { 
+     if (dialogueActive) {
+
+            if (Input.GetKey(KeyCode.E) || Input.GetMouseButtonDown(0))
+            {
+                if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <= AfterQuestDialogueObjects.Length)
+                {
+                    dialogueIndex++; // increases the index 
+                    PlayDialogue();
+                }
+                else
+                {
+                    dialogueIndex = 0; // resets dialogue to 0 
+                    HideDialouge();
+                }
+
+            }
         }
-        else
-        {
-            dialogueIndex = 0; // resets dialogue to 0 
-            HideDialouge();
-        }
-        
-        
+       
+
     }
 
     public void HideDialouge() // called once it reaches the end of a sequence 
     {
         Dialogue.gameObject.SetActive(false);
+        dialogueIndex = 0;
     }
 }

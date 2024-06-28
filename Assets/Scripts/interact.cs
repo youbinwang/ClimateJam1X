@@ -6,10 +6,12 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public int starCount;
+    public GameObject ePopup; // ui popup when you can press E to interact 
 
     // Start is called before the first frame update
     void Start()
     {
+        ePopup.SetActive(false);
         starCount = 0;
     }
 
@@ -21,8 +23,10 @@ public class Interact : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        ePopup.SetActive(true);
+        if (Input.GetKey(KeyCode.E))
         {
+            
             if (other.gameObject.CompareTag("NPC"))
             {
                 Dialogue(other);
@@ -33,14 +37,17 @@ public class Interact : MonoBehaviour
                 CollectStar();
                 other.gameObject.SetActive(false);
             }
+            ePopup.SetActive(false);
         }
 
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        
+        if (Input.GetKey(KeyCode.E))
         {
+            
             if (other.gameObject.CompareTag("NPC"))
             {
                 Dialogue(other);
@@ -51,7 +58,13 @@ public class Interact : MonoBehaviour
                 CollectStar();
                 other.gameObject.SetActive(false);
             }
+            ePopup.SetActive(false);
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        ePopup.SetActive(false);
     }
 
     // get the dialogueScript of the object that player collided 
