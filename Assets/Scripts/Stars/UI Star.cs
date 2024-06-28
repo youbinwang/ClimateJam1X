@@ -10,6 +10,6 @@ public class UIStar : MonoBehaviour, IPointerClickHandler
     {
 
         Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
-        FindObjectOfType<StarInventory>().createDragStarOnClick(Input.mousePosition); // passes mouse position to the spawner to spawn a star at click
+        FindObjectOfType<StarInventory>().CreateDragStarOnClick(Input.mousePosition); // passes mouse position to the spawner to spawn a star at click
     }
 }
