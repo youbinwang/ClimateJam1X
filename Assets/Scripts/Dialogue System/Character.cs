@@ -20,19 +20,22 @@ public class Character : MonoBehaviour
 
     [SerializeField] public Button nextButton; // the "next button" for the dialogue
     public bool dialogueActive;
+
+    public GameObject Player;
     void Start()
     {
        dialogueIndex = 0; // instantiate's index
         HideDialouge();
         dialogueActive = false;
         trackingInt = 0;
-      
 
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
     {
         NextState();
+
     }
 
     public void QuestDone() //things to do after the character's quest is complete

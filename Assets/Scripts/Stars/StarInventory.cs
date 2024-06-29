@@ -36,4 +36,20 @@ public class StarInventory : MonoBehaviour
     }
 
 
+    // stuff that's relevant when the minigame is active
+    public void CreateDragStarOnClick(Vector3 mousePos) // have this ON CLICK for the star in UI
+    {
+        uiSpawnPos = mousePos;
+
+      if (invstarCount > 0)
+        {
+            // instantiates a new star to drag
+            
+            GameObject newStar = Instantiate(starPrefab, uiSpawnPos, Quaternion.identity, screenPanel); // the game object that gets spawned in 
+            // subtracts the star count
+            invstarCount--;
+            FindObjectOfType<Interact>().starCount--;
+        }
+    }
+
 }
