@@ -17,4 +17,14 @@ public class StarObject : MonoBehaviour
 
         }
     }
+
+    public void HideConnections()
+    {
+        for (int i = 0; i < connections.Length; i++)
+        {
+            connections[i].gameObject.SetActive(false);
+            Debug.Log("Setting connection " + i + "active");
+
+        }
+    }
 }
