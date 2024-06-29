@@ -6,10 +6,11 @@ using UnityEngine.EventSystems;
 
 public class UIStar : MonoBehaviour, IPointerClickHandler
 {
+    // THIS SCRIPT IS UNUSED AND SHOULD BE DELETED
     public void OnPointerClick(PointerEventData eventData)
     {
 
         Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
-        FindObjectOfType<StarInventory>().CreateDragStarOnClick(Input.mousePosition); // passes mouse position to the spawner to spawn a star at click
+        // FindObjectOfType<StarInventory>().CreateDragStarOnClick(Input.mousePosition); // passes mouse position to the spawner to spawn a star at click
     }
 }

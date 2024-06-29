@@ -7,10 +7,15 @@ public class Interact : MonoBehaviour
 {
     public int starCount;
     public GameObject ePopup; // ui popup when you can press E to interact 
+    [SerializeField] public GameObject constellationUI; // constellation UI 
+    [SerializeField] public GameObject closeButton; // close button
+    [SerializeField] public GameObject panel; //star panel
 
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<StarInventory>().invstarCount = starCount;
+        FindObjectOfType<StarInventory>().GetStarCount();
         ePopup.SetActive(false);
         starCount = 0;
     }
@@ -88,5 +93,13 @@ public class Interact : MonoBehaviour
         starCount++;
         Debug.Log("Star Count: " + starCount);
         FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
+    }
+
+    public void CloseConstellationUI()
+    {
+        constellationUI.gameObject.SetActive(false);    
+        closeButton.gameObject.SetActive(false);
+        panel.gameObject.SetActive(false);
+
     }
 }

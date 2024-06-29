@@ -40,6 +40,9 @@ public class Character : MonoBehaviour
 
     public void QuestDone() //things to do after the character's quest is complete
     {
+        FindObjectOfType<Interact>().constellationUI.gameObject.SetActive(true);
+        FindObjectOfType<Interact>().closeButton.gameObject.SetActive(true);
+        FindObjectOfType<Interact>().panel.gameObject.SetActive(true);
         trackingInt = 1; // switches the tracking int to 1a
         Debug.Log("quest updated"); //file pushing
     }
