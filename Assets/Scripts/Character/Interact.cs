@@ -29,7 +29,7 @@ public class Interact : MonoBehaviour
             if (starCount == 2)
             {
                 Debug.Log("updating quest");
-                other.GetComponent<Character>().QuestDone();
+                other.GetComponent<Character>().QuestDone(); //so the dialogue updates
             }
         }
         if (Input.GetKey(KeyCode.E))

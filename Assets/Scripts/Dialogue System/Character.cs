@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
     public void QuestDone() //things to do after the character's quest is complete
     {
         trackingInt = 1; // switches the tracking int to 1a
-        Debug.Log("quest updated");
+        Debug.Log("quest updated"); //file pushing
     }
 
     public void ShowDialogue() // called by farah's dialogue function. 
