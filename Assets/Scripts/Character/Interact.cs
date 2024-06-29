@@ -24,6 +24,14 @@ public class Interact : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ePopup.SetActive(true);
+        if (other.gameObject.CompareTag("NPC"))
+        {
+            if (starCount == 2)
+            {
+                Debug.Log("updating quest");
+                other.GetComponent<Character>().QuestDone();
+            }
+        }
         if (Input.GetKey(KeyCode.E))
         {
             

@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 2
+  m_Name: DialogueBefore 12
   m_EditorClassIdentifier: 
-  nodeText: 'i''m out D:'
+  nodeText: Oh hush. None of that is important. Now please let me and my love be.
+    Run along now!

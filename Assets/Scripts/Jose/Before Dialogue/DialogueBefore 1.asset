@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore
+  m_Name: DialogueBefore 1
   m_EditorClassIdentifier: 
-  nodeText: Hi! i'm just a NPC doing my daily job :)
+  nodeText: "But you ran into me\u2026"

@@ -3573,13 +3573,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf21bb4db044f744b80bae5ffb414848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: NPC
+  Name: Moth
   BeforeQuestDialogueObjects:
   - {fileID: 11400000, guid: 896107fdcc03cbe4f840528dece5377e, type: 2}
   - {fileID: 11400000, guid: 67f0c4c37ae07064a9afe55360210e13, type: 2}
   - {fileID: 11400000, guid: adc5994f80abece43a80be71e40abe9d, type: 2}
+  - {fileID: 11400000, guid: 054965c58b0218548a9b493e582e2f9f, type: 2}
+  - {fileID: 11400000, guid: 3b65cce023450df44ae6b408fb1cae0f, type: 2}
+  - {fileID: 11400000, guid: 074a259361f088a468c23418bc293fd9, type: 2}
+  - {fileID: 11400000, guid: 90068e62a226dea40ae1f7696ac6f12f, type: 2}
+  - {fileID: 11400000, guid: 3d612c35e2de8d84bb7bc9d043345ccf, type: 2}
+  - {fileID: 11400000, guid: 5ed14567499480349a3a239d1525a640, type: 2}
+  - {fileID: 11400000, guid: c8765d519c02bc2468ab25896ca4dde1, type: 2}
+  - {fileID: 11400000, guid: 36b0a2c6b50f44a4ba6f481956c8a1e7, type: 2}
+  - {fileID: 11400000, guid: d70cbbac5fd01ba4782bd3a1908f59af, type: 2}
+  - {fileID: 11400000, guid: 6cc7d8be28fa92c42a4df9ece8e1e7db, type: 2}
+  - {fileID: 11400000, guid: 4a47deb339adc2a4d9cf980d63a093ac, type: 2}
   AfterQuestDialogueObjects:
   - {fileID: 11400000, guid: 7b341f6aa4494b64d875876fae9f9305, type: 2}
+  - {fileID: 11400000, guid: f279cf9eb75bd564a963b8036a7bcd95, type: 2}
+  - {fileID: 11400000, guid: ef0e0c738e84749479817b7461410934, type: 2}
+  - {fileID: 11400000, guid: 862e6f6fee6175543a8f12e8803a1a00, type: 2}
+  - {fileID: 11400000, guid: 1b3fb3f9bf65295418886bbf786189cb, type: 2}
+  - {fileID: 11400000, guid: fb6c79d313ffdba42aaf104a2621da0c, type: 2}
   dialogueIndex: 0
   trackingInt: 0
   Dialogue: {fileID: 2050095936}
@@ -3587,6 +3603,7 @@ MonoBehaviour:
   DialogueText: {fileID: 1444597123}
   nextButton: {fileID: 0}
   dialogueActive: 0
+  Player: {fileID: 0}
 --- !u!4 &1106477815
 Transform:
   m_ObjectHideFlags: 0
@@ -6217,7 +6234,7 @@ GameObject:
   - component: {fileID: 1788008619}
   m_Layer: 0
   m_Name: ===Player===
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
