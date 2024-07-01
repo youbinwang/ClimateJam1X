@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 6
+  m_Name: DialogueBefore 2
   m_EditorClassIdentifier: 
-  nodeText: "No you fool! I\u2019m talking about my precious light. I could stare
-    at it forever, ever since the mayor implemented STAR energy, my love seems to
-    be shining brighter than ever!\u201D"
+  nodeText: "The way I see it is you\u2019re walking where I need to be. Therefore
+    you\u2019re in MY way."
+  charName: Mothy
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

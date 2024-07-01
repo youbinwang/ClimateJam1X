@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 8
+  m_Name: DialogueBefore 10
   m_EditorClassIdentifier: 
-  nodeText: "Yep that\u2019s right! The mayor has done such a great job with the
-    introduction of STAR into our town! I couldn\u2019t imagine a life without it,
-    or more importantly how beautiful my love looks shining in the night.\u201D"
+  nodeText: "That doesn\u2019t matter! All I need is to be embraced by it\u2019s
+    warm glow to know everything is going to be alright, my sweet sweet love."
+  charName: Mothy
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

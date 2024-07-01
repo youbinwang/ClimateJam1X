@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 4
+  m_Name: DialogueBefore 13
   m_EditorClassIdentifier: 
-  nodeText: "Ah! Can\u2019t you see? My beautiful love, it\u2019s right here!"
+  nodeText: "Wait, could it be? Those are stars inside the streetlamp! Those aren\u2019t
+    supposed to be there\u2026"
+  charName: Thalia
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

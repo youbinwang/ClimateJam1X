@@ -17,6 +17,7 @@ public class Character : MonoBehaviour
     [SerializeField] private GameObject Dialogue; // SF for now in case we want to have custom textboxes but probably not lol 
     [SerializeField] private TextMeshProUGUI CharacterName;
     [SerializeField] private TextMeshProUGUI DialogueText;
+    [SerializeField] private Image CharacterImage; // face image
 
     [SerializeField] public Button nextButton; // the "next button" for the dialogue
     public bool dialogueActive;
@@ -67,9 +68,13 @@ public class Character : MonoBehaviour
         }else if (trackingInt == 0)
         {
             DialogueText.text = BeforeQuestDialogueObjects[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            CharacterName.text = BeforeQuestDialogueObjects[dialogueIndex].GetCharName(); // gets the character name for the dialouge
+            CharacterImage.sprite = BeforeQuestDialogueObjects[dialogueIndex].GetCharImage(); // gets the characters' image
         } else if (trackingInt == 1)
         {
             DialogueText.text = AfterQuestDialogueObjects[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            CharacterName.text = AfterQuestDialogueObjects[dialogueIndex].GetCharName(); // gets the character name for the dialouge
+            CharacterImage.sprite = AfterQuestDialogueObjects[dialogueIndex].GetCharImage(); 
         }
         // later i can add a typewriter text thing if needed!
     }

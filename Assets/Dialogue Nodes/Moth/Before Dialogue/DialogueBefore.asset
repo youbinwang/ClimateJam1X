@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: DialogueBefore
   m_EditorClassIdentifier: 
   nodeText: Hey! Watch it will ya!
+  charName: Mothy
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

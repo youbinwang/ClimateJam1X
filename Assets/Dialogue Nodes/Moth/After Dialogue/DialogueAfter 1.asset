@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 1
+  m_Name: DialogueAfter 1
   m_EditorClassIdentifier: 
-  nodeText: "But you ran into me\u2026"
+  nodeText: "*Sobs* How\u2026 how could you!? YOU KILLED MY PRECIOUS LIGHT YOU MONSTER!"
+  charName: Mothy
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

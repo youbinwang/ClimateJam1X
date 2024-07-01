@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: DialogueBefore 7
+  m_Name: DialogueBefore 11
   m_EditorClassIdentifier: 
-  nodeText: "Ah\u2026 you mean the streetlamp\u2026 wait, did you say STAR energy?"
+  nodeText: "Well to be completely honest with you, it looks like you\u2019ve been
+    frantically chasing lights for who knows how long! When\u2019s the last time
+    you\u2019ve eaten?!"
+  charName: Thalia
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
