@@ -1669,6 +1669,8 @@ GameObject:
   - component: {fileID: 5612095929673065798}
   - component: {fileID: 5612095929673065797}
   - component: {fileID: 5612095929673065800}
+  - component: {fileID: 5612095929673065801}
+  - component: {fileID: 5612095929673065802}
   m_Layer: 0
   m_Name: thalia/player
   m_TagString: Player
@@ -1837,6 +1839,41 @@ CapsuleCollider:
   m_Height: 13.42848
   m_Direction: 1
   m_Center: {x: -0.020013727, y: 6.6921115, z: -0.2987714}
+--- !u!114 &5612095929673065801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091877033389359097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ecf80cb58451641a7dad35b846308c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 5612095929673065802}
+  idleTimeThreshold: 3
+--- !u!95 &5612095929673065802
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5091877033389359097}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fac1522e3d466ad468a4fc8327894eb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &5720147635089571843
 Transform:
   m_ObjectHideFlags: 0
