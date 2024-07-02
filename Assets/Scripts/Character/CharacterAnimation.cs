@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
@@ -16,7 +18,8 @@ public class CharacterAnimation : MonoBehaviour
         bool isWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
         bool isRunning = isWalking && Input.GetKey(KeyCode.LeftShift);
         bool isJumping = Input.GetKeyDown(KeyCode.Space); // Detect jump input
-
+        bool isInteracting = Input.GetKeyDown(KeyCode.E);
+        
         // Set animation parameters based on movement states
         if (isRunning)
         {
@@ -50,6 +53,11 @@ public class CharacterAnimation : MonoBehaviour
         if (isJumping)
         {
             animator.SetTrigger("Jump"); // Assuming "Jump" is the trigger parameter name
+        }
+
+        if (isInteracting)
+        {
+            animator.SetTrigger("Interact");
         }
     }
 }

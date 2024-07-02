@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("Ground Check")]
     private bool isGrounded;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private float groundCheckRadius = 0.2f;
+    private float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
     
     [Header("Turn")]

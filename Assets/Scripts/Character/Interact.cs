@@ -10,7 +10,8 @@ public class Interact : MonoBehaviour
     [SerializeField] public GameObject constellationUI; // constellation UI 
     [SerializeField] public GameObject closeButton; // close button
     [SerializeField] public GameObject panel; //star panel
-
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,6 @@ public class Interact : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.E))
         {
-            
             if (other.gameObject.CompareTag("NPC"))
             {
                 Dialogue(other);
@@ -60,7 +60,6 @@ public class Interact : MonoBehaviour
         
         if (Input.GetKey(KeyCode.E))
         {
-            
             if (other.gameObject.CompareTag("NPC"))
             {
                 Dialogue(other);
