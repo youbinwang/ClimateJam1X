@@ -12,6 +12,8 @@ public class CharacterMovement : MonoBehaviour
     private float gravityMultiplier = 2.75f;
     
     private Rigidbody rb;
+    private bool isFlipping = false;
+    public bool canMove = true;
     
     [Header("Ground Check")]
     private bool isGrounded;
@@ -32,7 +34,11 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        Move();
+        if (canMove)
+        {
+            Move();
+        }
+
         CheckGrounded();
     }
 
@@ -47,13 +53,9 @@ public class CharacterMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveX * currentSpeed, rb.velocity.y, 0);
         rb.velocity = movement;
 
-        // Debugging: Log the isGrounded state and jump input
-        Debug.Log("isGrounded: " + isGrounded);
-
         // Apply jump force if the player presses the jump button and the character is on the ground
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            Debug.Log("Jumping");
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
         }
 
@@ -64,14 +66,14 @@ public class CharacterMovement : MonoBehaviour
         }
         
         // Player movement direction
-        if (moveX > 0 && !facingRight)
+        if (moveX > 0 && !facingRight && !isFlipping)
         {
-            StartCoroutine(Flip(Vector3.up * 180f));
+            StartCoroutine(Flip(Vector3.up * 270f));
             facingRight = true;
         }
-        else if (moveX < 0 && facingRight)
+        else if (moveX < 0 && facingRight && !isFlipping)
         {
-            StartCoroutine(Flip(Vector3.up * -180f));
+            StartCoroutine(Flip(Vector3.up * -270f));
             facingRight = false;
         }
     }
@@ -87,6 +89,7 @@ public class CharacterMovement : MonoBehaviour
     
     IEnumerator Flip(Vector3 byAngles)
     {
+        isFlipping = true;
         Quaternion fromAngle = playerMesh.rotation;
         Quaternion toAngle = Quaternion.Euler(playerMesh.eulerAngles + byAngles);
         for (float t = 0f; t < 1f; t += Time.deltaTime * turnSpeed)
@@ -95,5 +98,12 @@ public class CharacterMovement : MonoBehaviour
             yield return null;
         }
         playerMesh.rotation = toAngle;
+        isFlipping = false;
+    }
+    
+    public void InteractStopMove()
+    {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
     }
 }

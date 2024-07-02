@@ -5797,7 +5797,7 @@ GameObject:
   - component: {fileID: 1526921295}
   - component: {fileID: 1526921298}
   - component: {fileID: 1526921297}
-  - component: {fileID: 1526921296}
+  - component: {fileID: 1526921299}
   m_Layer: 0
   m_Name: Thalia
   m_TagString: Player
@@ -5813,7 +5813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526921294}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.86602545, z: 0, w: 0.49999994}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
@@ -5832,19 +5832,7 @@ Transform:
   - {fileID: 1915203946}
   - {fileID: 1268475170}
   m_Father: {fileID: 1788008615}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &1526921296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526921294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de5bcccb61fa49b469cda3b96c02311f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_LocalEulerAnglesHint: {x: 0, y: 120, z: 0}
 --- !u!95 &1526921297
 Animator:
   serializedVersion: 5
@@ -5889,6 +5877,19 @@ CapsuleCollider:
   m_Height: 11.5
   m_Direction: 1
   m_Center: {x: 0, y: 6, z: 0}
+--- !u!114 &1526921299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526921294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5bcccb61fa49b469cda3b96c02311f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
 --- !u!1 &1559230115
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,8 +6660,8 @@ MonoBehaviour:
   moveSpeed: 3
   runSpeed: 6
   jumpForce: 8
+  canMove: 1
   groundCheck: {fileID: 574607316}
-  groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -8098,6 +8099,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4092886596472214341, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092886596472214341, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092886596472214341, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092886596472214341, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092886596472214341, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: Dialogue
@@ -8248,6 +8274,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4a47deb339adc2a4d9cf980d63a093ac,
         type: 2}
+    - target: {fileID: 6215925277358140569, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7246072723889547431, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: m_Name
@@ -8266,7 +8297,7 @@ PrefabInstance:
     - target: {fileID: 8204474698325116253, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8204474698325116253, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}

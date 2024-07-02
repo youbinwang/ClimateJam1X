@@ -7,13 +7,18 @@ public class Interact : MonoBehaviour
 {
     public int starCount;
     public GameObject ePopup; // ui popup when you can press E to interact 
-    [SerializeField] public GameObject constellationUI; // constellation UI 
-    [SerializeField] public GameObject closeButton; // close button
-    [SerializeField] public GameObject panel; //star panel
+    public GameObject constellationUI; // constellation UI 
+    public GameObject closeButton; // close button
+    public GameObject panel; //star panel
     
+    private CharacterMovement characterMovement;
+    private CharacterAnimation characterAnimation;
     
     void Start()
     {
+        characterMovement = FindObjectOfType<CharacterMovement>();
+        characterAnimation = FindObjectOfType<CharacterAnimation>();
+        
         FindObjectOfType<StarInventory>().invstarCount = starCount;
         FindObjectOfType<StarInventory>().GetStarCount();
         ePopup.SetActive(false);
@@ -31,21 +36,22 @@ public class Interact : MonoBehaviour
                 other.GetComponent<Character>().QuestDone(); //so the dialogue updates
             }
         }
-        if (Input.GetKey(KeyCode.E))
-        {
-            if (other.gameObject.CompareTag("NPC"))
-            {
-                Dialogue(other);
-            }
-
-            if (other.gameObject.CompareTag("Star"))
-            {
-                CollectStar();
-                other.gameObject.SetActive(false);
-            }
-            ePopup.SetActive(false);
-        }
-
+        // if (Input.GetKey(KeyCode.E))
+        // {
+        //     if (other.gameObject.CompareTag("NPC"))
+        //     {
+        //         // Dialogue(other);
+        //         StartCoroutine(HandleDialogue(other));
+        //     }
+        //
+        //     if (other.gameObject.CompareTag("Star"))
+        //     {
+        //         // CollectStar();
+        //         StartCoroutine(HandleCollectStar(other));
+        //         other.gameObject.SetActive(false);
+        //     }
+        //     ePopup.SetActive(false);
+        //  }
     }
 
     private void OnTriggerStay(Collider other)
@@ -55,12 +61,14 @@ public class Interact : MonoBehaviour
         {
             if (other.gameObject.CompareTag("NPC"))
             {
-                Dialogue(other);
+                // Dialogue(other);
+                StartCoroutine(HandleDialogue(other));
             }
 
             if (other.gameObject.CompareTag("Star"))
             {
-                CollectStar();
+                // CollectStar();
+                StartCoroutine(HandleCollectStar(other));
                 other.gameObject.SetActive(false);
             }
             ePopup.SetActive(false);
@@ -73,25 +81,57 @@ public class Interact : MonoBehaviour
     }
 
     // get the dialogueScript of the object that player collided 
-    private void Dialogue(Collider other)
+    // private void Dialogue(Collider other)
+    // {
+    //     characterMovement.canMove = false;
+    //     characterMovement.InteractStopMove();
+    //     characterAnimation.Interact();
+    //     
+    //     Character dialogueScript = other.gameObject.GetComponent<Character>();
+    //     dialogueScript.ShowDialogue();
+    // }
+
+    private IEnumerator HandleDialogue(Collider other)
     {
-        Debug.Log("Dialogue triggered.");
+        characterMovement.canMove = false;
+        characterMovement.InteractStopMove();
+        characterAnimation.Interact();
+        
+        yield return new WaitForSeconds(1.25f);
+
+        characterAnimation.SetIdleState();
         Character dialogueScript = other.gameObject.GetComponent<Character>();
         dialogueScript.ShowDialogue();
     }
 
+    private IEnumerator HandleCollectStar(Collider other)
+    {
+        characterMovement.canMove = false;
+        characterMovement.InteractStopMove();
+        characterAnimation.Interact();
+        
+        yield return new WaitForSeconds(1.25f);
+        CollectStar();
+        EndDialogue();
+    }
+    
     void CollectStar()
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
         FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
     }
-
+    
     public void CloseConstellationUI()
     {
         constellationUI.gameObject.SetActive(false);    
         closeButton.gameObject.SetActive(false);
         panel.gameObject.SetActive(false);
-
+    }
+    
+    public void EndDialogue()
+    {
+        characterMovement.canMove = true;
+        characterAnimation.EndInteraction();
     }
 }

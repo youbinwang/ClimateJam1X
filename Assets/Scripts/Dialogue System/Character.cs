@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     public GameObject Player;
     void Start()
     {
-       dialogueIndex = 0; // instantiate's index
+        dialogueIndex = 0; // instantiate's index
         HideDialouge();
         dialogueActive = false;
         trackingInt = 0;
@@ -36,7 +36,6 @@ public class Character : MonoBehaviour
     void Update()
     {
         NextState();
-
     }
 
     public void QuestDone() //things to do after the character's quest is complete
@@ -79,12 +78,10 @@ public class Character : MonoBehaviour
         // later i can add a typewriter text thing if needed!
     }
 
-   
-
-
-    public void NextState() { 
-     if (dialogueActive) {
-
+    public void NextState()
+    { 
+        if (dialogueActive)
+        {
             if (Input.GetMouseButtonDown(0))
             {
                 if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <= AfterQuestDialogueObjects.Length)
@@ -97,16 +94,14 @@ public class Character : MonoBehaviour
                     dialogueIndex = 0; // resets dialogue to 0 
                     HideDialouge();
                 }
-
             }
         }
-       
-
     }
 
     public void HideDialouge() // called once it reaches the end of a sequence 
     {
         Dialogue.gameObject.SetActive(false);
         dialogueIndex = 0;
+        FindObjectOfType<Interact>().EndDialogue();
     }
 }

@@ -20,17 +20,6 @@ public class StarSpawner : MonoBehaviour
         canSpawn = true;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void MinigameIsUp()
-    {
-        canSpawn = true;
-    }
-
     public void spawnAStar()
     {
         Debug.Log("Clicked");
@@ -39,7 +28,7 @@ public class StarSpawner : MonoBehaviour
             if (FindObjectOfType<Interact>().starCount > 0)
             {
                 Vector2 spawnPosition = GetSpawn(); // gets the spawn position of the dialogue object at random 
-                GameObject newStar = Instantiate(starPrefab, spawnPosition, Quaternion.identity, screenPanel);
+                Instantiate(starPrefab, spawnPosition, Quaternion.identity, screenPanel);
                 FindObjectOfType<Interact>().starCount--; // subtracts star count
                 FindObjectOfType<StarInventory>().GetStarCount(); // substracts star count in UI text
                 Debug.Log("Star Count:" + FindObjectOfType<Interact>().starCount);
