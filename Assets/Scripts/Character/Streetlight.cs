@@ -7,7 +7,7 @@ public class Streetlight : MonoBehaviour
 {
     private GameObject star;
     private GameObject streetLight;
-    private GameObject light;
+    private GameObject starLight;
     
     GameObject FindInChildren(GameObject parent, string name)
     {
@@ -30,7 +30,7 @@ public class Streetlight : MonoBehaviour
     {
         star = FindInChildren(gameObject, "Star");
         streetLight = FindInChildren(gameObject, "Streetlight Mesh");
-        light = FindInChildren(gameObject, "Light");
+        starLight = FindInChildren(gameObject, "Light");
     }
     
     void Update()
@@ -51,6 +51,6 @@ public class Streetlight : MonoBehaviour
     void LightOff()
     {
         Debug.Log("Light Off Method");
-        light.SetActive(false);
+        starLight.SetActive(false);
     }
 }

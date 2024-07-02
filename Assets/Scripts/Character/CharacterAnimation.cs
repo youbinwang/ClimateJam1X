@@ -8,13 +8,12 @@ public class CharacterAnimation : MonoBehaviour
 
     void Start()
     {
-        // Get the Animator component
         animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        bool isWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
+        bool isWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow);
         bool isRunning = isWalking && Input.GetKey(KeyCode.LeftShift);
         bool isJumping = Input.GetKeyDown(KeyCode.Space); // Detect jump input
 
