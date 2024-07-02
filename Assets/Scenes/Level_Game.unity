@@ -1809,7 +1809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
-  runSpeed: 10
+  runSpeed: 6
   jumpForce: 6
   gravityMultiplier: 2.75
   groundCheck: {fileID: 1573085387}

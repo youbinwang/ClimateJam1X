@@ -16,7 +16,9 @@ public class CharacterAnimation : MonoBehaviour
     {
         bool isWalking = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D);
         bool isRunning = isWalking && Input.GetKey(KeyCode.LeftShift);
+        bool isJumping = Input.GetKeyDown(KeyCode.Space); // Detect jump input
 
+        // Set animation parameters based on movement states
         if (isRunning)
         {
             animator.SetBool("Walk", false);
@@ -29,7 +31,6 @@ public class CharacterAnimation : MonoBehaviour
             animator.SetBool("Stop", false);
             animator.SetBool("Run", false);
 
-            // Check if shift is held down to transition to running
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 animator.SetBool("Run", true);
@@ -44,6 +45,12 @@ public class CharacterAnimation : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Stop", true);
             animator.SetBool("Run", false);
+        }
+
+        // Trigger jump animation
+        if (isJumping)
+        {
+            animator.SetTrigger("Jump"); // Assuming "Jump" is the trigger parameter name
         }
     }
 }
