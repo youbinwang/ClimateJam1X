@@ -23,7 +23,6 @@ public class CharacterMovement : MonoBehaviour
     private bool facingRight = true;
     private float turnSpeed = 3.5f;
     [SerializeField] private Transform playerMesh;
-
     
     
     void Start()

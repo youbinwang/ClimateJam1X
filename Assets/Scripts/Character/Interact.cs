@@ -12,19 +12,12 @@ public class Interact : MonoBehaviour
     [SerializeField] public GameObject panel; //star panel
     
     
-    // Start is called before the first frame update
     void Start()
     {
         FindObjectOfType<StarInventory>().invstarCount = starCount;
         FindObjectOfType<StarInventory>().GetStarCount();
         ePopup.SetActive(false);
         starCount = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnTriggerEnter(Collider other)
