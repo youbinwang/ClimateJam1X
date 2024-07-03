@@ -30,7 +30,7 @@ public class StarSpawner : MonoBehaviour
                 Vector2 spawnPosition = GetSpawn(); // gets the spawn position of the dialogue object at random 
                 Instantiate(starPrefab, spawnPosition, Quaternion.identity, screenPanel);
                 FindObjectOfType<Interact>().starCount--; // subtracts star count
-                FindObjectOfType<StarInventory>().GetStarCount(); // substracts star count in UI text
+                FindObjectOfType<Interact>().InventoryStars(); // substracts star count in UI text
                 Debug.Log("Star Count:" + FindObjectOfType<Interact>().starCount);
                 Debug.Log("Clone Created");
               

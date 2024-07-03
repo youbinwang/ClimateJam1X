@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Interact : MonoBehaviour
@@ -10,7 +11,8 @@ public class Interact : MonoBehaviour
     public GameObject constellationUI; // constellation UI 
     public GameObject closeButton; // close button
     public GameObject panel; //star panel
-    
+    public TextMeshProUGUI starCountUIText; // UI text 
+
     private CharacterMovement characterMovement;
     private CharacterAnimation characterAnimation;
     
@@ -119,7 +121,13 @@ public class Interact : MonoBehaviour
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
-        FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
+        // FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
+        InventoryStars();
+    }
+
+    public void InventoryStars()
+    {
+        starCountUIText.text = starCount.ToString();
     }
     
     public void CloseConstellationUI()

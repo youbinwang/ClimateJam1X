@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -896,7 +896,6 @@ GameObject:
   - component: {fileID: 78840026}
   - component: {fileID: 78840025}
   - component: {fileID: 78840024}
-  - component: {fileID: 78840023}
   m_Layer: 0
   m_Name: ===Player===
   m_TagString: Player
@@ -904,20 +903,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &78840023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78840022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 450921e138d426049bf9cc9ac44e7317, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  invstarCount: 0
-  starCountUIText: {fileID: 2126506683}
 --- !u!114 &78840024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +920,7 @@ MonoBehaviour:
   constellationUI: {fileID: 2126506685}
   closeButton: {fileID: 2126506681}
   panel: {fileID: 2126506684}
+  starCountUIText: {fileID: 2126506683}
 --- !u!54 &78840025
 Rigidbody:
   m_ObjectHideFlags: 0
