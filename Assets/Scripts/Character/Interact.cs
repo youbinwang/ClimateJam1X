@@ -32,7 +32,7 @@ public class Interact : MonoBehaviour
         {
             if (starCount == 2)
             {
-                Debug.Log("updating quest");
+                Debug.Log("Updating Quest");
                 other.GetComponent<Character>().QuestDone(); //so the dialogue updates
             }
         }
