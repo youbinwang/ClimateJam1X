@@ -21,8 +21,8 @@ public class Interact : MonoBehaviour
         characterMovement = FindObjectOfType<CharacterMovement>();
         characterAnimation = FindObjectOfType<CharacterAnimation>();
         
-        FindObjectOfType<StarInventory>().invstarCount = starCount;
-        FindObjectOfType<StarInventory>().GetStarCount();
+        //FindObjectOfType<StarInventory>().invstarCount = starCount;
+        //FindObjectOfType<StarInventory>().GetStarCount();
         ePopup.SetActive(false);
         starCount = 0;
     }
@@ -32,7 +32,7 @@ public class Interact : MonoBehaviour
         ePopup.SetActive(true);
         if (other.gameObject.CompareTag("NPC"))
         {
-            if (starCount == 2)
+            if (starCount >= other.GetComponent<Character>().starsReqd)
             {
                 Debug.Log("Updating Quest");
                 other.GetComponent<Character>().QuestDone(); //so the dialogue updates

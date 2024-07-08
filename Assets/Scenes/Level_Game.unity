@@ -6742,6 +6742,11 @@ PrefabInstance:
       objectReference: {fileID: 2126506680}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: starsReqd
+      value: 999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: DialogueText
       value: 
       objectReference: {fileID: 2126506679}
@@ -12841,6 +12846,11 @@ PrefabInstance:
       propertyPath: Dialogue
       value: 
       objectReference: {fileID: 2126506680}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: starsReqd
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: DialogueText

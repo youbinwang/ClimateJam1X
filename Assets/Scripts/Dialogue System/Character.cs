@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
     public int dialogueIndex; // index for the dialouge node IN THE ARRAY. NOT the same thing as the tracking int. 
     public int trackingInt; // int that keeps track of game state - triggers certain dialogue when this int is reached. (tracking ints are basically the quest system) 0 is BEFORE QUEST and 1 is AFTER QUEST
 
+    public int starsReqd; // stars required for the quest to be considered "over"
+
     [SerializeField] private GameObject Dialogue; // SF for now in case we want to have custom textboxes but probably not lol 
     [SerializeField] private TextMeshProUGUI CharacterName;
     [SerializeField] private TextMeshProUGUI DialogueText;
