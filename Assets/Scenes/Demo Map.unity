@@ -6714,7 +6714,7 @@ MonoBehaviour:
   constellationUI: {fileID: 2019119831}
   closeButton: {fileID: 759217430}
   panel: {fileID: 1864099090}
-  starCountUIText: {fileID: 0}
+  starCountUIText: {fileID: 798928391}
 --- !u!114 &1788008619
 MonoBehaviour:
   m_ObjectHideFlags: 0
