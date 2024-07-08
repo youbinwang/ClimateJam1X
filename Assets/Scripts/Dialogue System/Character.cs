@@ -23,12 +23,19 @@ public class Character : MonoBehaviour
     public bool dialogueActive;
 
     public GameObject Player;
+
+    public TextMeshProUGUI[] journalEntries;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
         HideDialouge();
         dialogueActive = false;
         trackingInt = 0;
+
+        for (int i = 0; i < journalEntries.Length; i++)
+        {
+            journalEntries[i].enabled = false;
+        }
 
         Player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -44,6 +51,14 @@ public class Character : MonoBehaviour
         FindObjectOfType<Interact>().closeButton.gameObject.SetActive(true);
         FindObjectOfType<Interact>().panel.gameObject.SetActive(true);
         trackingInt = 1; // switches the tracking int to 1a
+        if(journalEntries.Length > 0)
+        {
+            for (int i = 0; i < journalEntries.Length; i++)
+            {
+                journalEntries[i].enabled = true;
+            }
+        }
+
         Debug.Log("quest updated"); //file pushing
     }
 
