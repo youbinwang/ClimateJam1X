@@ -6666,6 +6666,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerMesh: {fileID: 1526921295}
+  climbableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  climbSpeed: 3
 --- !u!54 &1788008617
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6710,6 +6714,7 @@ MonoBehaviour:
   constellationUI: {fileID: 2019119831}
   closeButton: {fileID: 759217430}
   panel: {fileID: 1864099090}
+  starCountUIText: {fileID: 0}
 --- !u!114 &1788008619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6723,7 +6728,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invstarCount: 0
-  uiSpawnPos: {x: 0, y: 0}
   starCountUIText: {fileID: 798928391}
 --- !u!1 &1821582259
 GameObject:
@@ -8131,6 +8135,11 @@ PrefabInstance:
       objectReference: {fileID: 2050095936}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: starsReqd
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: DialogueText
       value: 
       objectReference: {fileID: 1444597123}
@@ -8455,6 +8464,7 @@ MonoBehaviour:
   constellationUI: {fileID: 0}
   closeButton: {fileID: 0}
   panel: {fileID: 0}
+  starCountUIText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
