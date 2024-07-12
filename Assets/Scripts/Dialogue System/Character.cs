@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
     private GameObject player;
 
     //public TextMeshProUGUI[] journalEntries;
-    private Journal journal;
+    [SerializeField] private Journal journal;
     public GameObject entry; //entry to be enabled
     private int journalIndex; //finds index of entry in the journal array
 
@@ -137,5 +137,35 @@ public class Character : MonoBehaviour
     {
         journalIndex = System.Array.IndexOf(journal.journalPages, entry);
         journal.pageAvailable[journalIndex] = true;
+
+        if(journalIndex  % 2 == 0 || journalIndex == 0)
+        {
+            for(int i = 0; i < journal.journalPages.Length; i++)
+            {
+                journal.journalPages[i].SetActive(false);
+            }
+
+            journal.journalPages[journalIndex].SetActive(true);
+
+            if (journal.pageAvailable[journalIndex + 1])
+            {
+                journal.journalPages[journalIndex + 1].SetActive(true);
+            }
+        }
+
+        else if (journalIndex % 2 == 1)
+        {
+            for (int i = 0; i < journal.journalPages.Length; i++)
+            {
+                journal.journalPages[i].SetActive(false);
+            }
+
+            journal.journalPages[journalIndex].SetActive(true);
+
+            if (journal.pageAvailable[journalIndex - 1])
+            {
+                journal.journalPages[journalIndex - 1].SetActive(true);
+            }
+        }
     }
 }

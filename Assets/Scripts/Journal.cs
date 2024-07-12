@@ -79,7 +79,7 @@ public class Journal : MonoBehaviour
         {
             if(i%2 == 0) //checking if the index is even
             {
-                if (journalPages[i].activeInHierarchy)
+                if (journalPages[i].activeInHierarchy && journalPages[i-3] != null)
                 {
                     journalPages[i].SetActive(false);
                     journalPages[i - 1].SetActive(false);
