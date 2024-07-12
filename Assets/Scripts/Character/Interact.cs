@@ -65,6 +65,7 @@ public class Interact : MonoBehaviour
             {
                 // Dialogue(other);
                 StartCoroutine(HandleDialogue(other));
+                other.GetComponent<Character>().UpdateJournal();
             }
 
             if (other.gameObject.CompareTag("Star"))

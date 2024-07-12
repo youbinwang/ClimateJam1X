@@ -26,7 +26,11 @@ public class Character : MonoBehaviour
 
     public GameObject Player;
 
-    public TextMeshProUGUI[] journalEntries;
+    //public TextMeshProUGUI[] journalEntries;
+    private Journal journal;
+    public GameObject entry; //entry to be enabled
+    private int journalIndex; //finds index of entry in the journal array
+
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
@@ -34,12 +38,13 @@ public class Character : MonoBehaviour
         dialogueActive = false;
         trackingInt = 0;
 
-        for (int i = 0; i < journalEntries.Length; i++)
-        {
-            journalEntries[i].enabled = false;
-        }
+        //for (int i = 0; i < journalEntries.Length; i++)
+        //{
+        //    journalEntries[i].enabled = false;
+        //}
 
         Player = GameObject.FindGameObjectWithTag("Player");
+        journal = FindObjectOfType<Journal>();
     }
 
     void Update()
@@ -53,13 +58,13 @@ public class Character : MonoBehaviour
         FindObjectOfType<Interact>().closeButton.gameObject.SetActive(true);
         FindObjectOfType<Interact>().panel.gameObject.SetActive(true);
         trackingInt = 1; // switches the tracking int to 1a
-        if(journalEntries.Length > 0)
-        {
-            for (int i = 0; i < journalEntries.Length; i++)
-            {
-                journalEntries[i].enabled = true;
-            }
-        }
+        //if(journalEntries.Length > 0)
+        //{
+        //    for (int i = 0; i < journalEntries.Length; i++)
+        //    {
+        //        journalEntries[i].enabled = true;
+        //    }
+        //}
 
         Debug.Log("quest updated"); //file pushing
     }
@@ -120,5 +125,11 @@ public class Character : MonoBehaviour
         Dialogue.gameObject.SetActive(false);
         dialogueIndex = 0;
         FindObjectOfType<Interact>().EndDialogue();
+    }
+
+    public void UpdateJournal()
+    {
+        journalIndex = System.Array.IndexOf(journal.journalPages, entry);
+        journal.pageAvailable[journalIndex] = true;
     }
 }
