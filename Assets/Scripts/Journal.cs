@@ -6,15 +6,12 @@ using UnityEngine;
 public class Journal : MonoBehaviour
 {
     public GameObject[] journalPages;
-    public bool[] pageAvailable;
+    public bool[] pageAvailable; //determines whether a player is able to see a page at all
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < pageAvailable.Length; i++)
-        {
-            pageAvailable[i] = false;
-        }
+
     }
 
     // Update is called once per frame
@@ -49,23 +46,23 @@ public class Journal : MonoBehaviour
         {
             if(i %2 == 1) // checking if the index is odd so we don't get overlapping objects
             {
-                if (journalPages[i].activeInHierarchy)
+                if (journalPages[i].activeInHierarchy && pageAvailable[i+1])
                 {
                     journalPages[i].SetActive(false);
 
-                    if (journalPages[i + 1] != null)
+                    if (journalPages[i - 1] != null)
                     {
-                        journalPages[i + 1].SetActive(false);
+                        journalPages[i - 1].SetActive(false);
+                    }
+
+                    if (journalPages[i + 1] != null && pageAvailable[i + 1])
+                    {
+                        journalPages[i + 1].SetActive(true);
                     }
 
                     if (journalPages[i + 2] != null && pageAvailable[i + 2])
                     {
                         journalPages[i + 2].SetActive(true);
-                    }
-
-                    if (journalPages[i + 3] != null && pageAvailable[i + 3])
-                    {
-                        journalPages[i + 3].SetActive(true);
                     }
 
                 }
@@ -79,13 +76,13 @@ public class Journal : MonoBehaviour
         {
             if(i%2 == 0) //checking if the index is even
             {
-                if (journalPages[i].activeInHierarchy && journalPages[i-3] != null)
+                if (journalPages[i].activeInHierarchy && (i-2) >= 0)
                 {
                     journalPages[i].SetActive(false);
-                    journalPages[i - 1].SetActive(false);
+                    journalPages[i + 1].SetActive(false);
 
+                    journalPages[i - 1].SetActive(true);
                     journalPages[i - 2].SetActive(true);
-                    journalPages[i - 3].SetActive(true);
                 }
             }
         }

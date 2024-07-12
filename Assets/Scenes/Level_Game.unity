@@ -13853,6 +13853,11 @@ PrefabInstance:
       objectReference: {fileID: 78840022}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 865715371}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Dialogue
       value: 
       objectReference: {fileID: 496145389}
@@ -17003,6 +17008,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 865715371}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: Dialogue
@@ -24219,6 +24229,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 865715371}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: Dialogue
@@ -56880,6 +56895,11 @@ PrefabInstance:
       objectReference: {fileID: 78840022}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 865715371}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Dialogue
       value: 
       objectReference: {fileID: 496145389}
@@ -61925,6 +61945,11 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: journal
+      value: 
+      objectReference: {fileID: 865715371}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: Dialogue
