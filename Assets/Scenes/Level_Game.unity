@@ -13968,6 +13968,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: Name
+      value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
@@ -13979,7 +13984,7 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: starsReqd
-      value: 99
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -13999,42 +14004,42 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.size
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 7b341f6aa4494b64d875876fae9f9305,
+      objectReference: {fileID: 11400000, guid: ebcc191de187a7c4d889c05ec0439c6e,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f279cf9eb75bd564a963b8036a7bcd95,
+      objectReference: {fileID: 11400000, guid: 1a7b94a99c440eb4b80c3233c5198178,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: ef0e0c738e84749479817b7461410934,
+      objectReference: {fileID: 11400000, guid: 3ef445f0e1395f14ea189e8be9e99ab0,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 862e6f6fee6175543a8f12e8803a1a00,
+      objectReference: {fileID: 11400000, guid: 5f862bc1d63830e4b81f18244891afdd,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b3fb3f9bf65295418886bbf786189cb,
+      objectReference: {fileID: 11400000, guid: 2e636e2a196ecfa4faad6e04b0b69d40,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -14046,37 +14051,37 @@ PrefabInstance:
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 896107fdcc03cbe4f840528dece5377e,
+      objectReference: {fileID: 11400000, guid: 5bc31d97323b4cb4b97555bf34490782,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 67f0c4c37ae07064a9afe55360210e13,
+      objectReference: {fileID: 11400000, guid: 5e732bc6ff037f249865761ddb7d40b5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: adc5994f80abece43a80be71e40abe9d,
+      objectReference: {fileID: 11400000, guid: 582fbd857cac5e243b43fa86fcc97626,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 054965c58b0218548a9b493e582e2f9f,
+      objectReference: {fileID: 11400000, guid: e3f8a02746408314b9a5e27bb60e20b5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 3b65cce023450df44ae6b408fb1cae0f,
+      objectReference: {fileID: 11400000, guid: c2fb4ff38bef93746a186c3fc3cc422c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 074a259361f088a468c23418bc293fd9,
+      objectReference: {fileID: 11400000, guid: 5297db7574a788a4a9046a17ebdf96d5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -24147,6 +24152,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: Name
+      value: Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
@@ -24158,7 +24168,7 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: starsReqd
-      value: 99
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -24178,36 +24188,36 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.size
-      value: 14
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 7b341f6aa4494b64d875876fae9f9305,
+      objectReference: {fileID: 11400000, guid: 010a61cb0cee088489873c234b00bb55,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f279cf9eb75bd564a963b8036a7bcd95,
+      objectReference: {fileID: 11400000, guid: 13ee905dcaf8b2041868dce0260f219c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: ef0e0c738e84749479817b7461410934,
+      objectReference: {fileID: 11400000, guid: 6c7e8380ae99b664db24c855419664b6,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 862e6f6fee6175543a8f12e8803a1a00,
+      objectReference: {fileID: 11400000, guid: 5f75004379265164390204a445296da1,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -24225,31 +24235,31 @@ PrefabInstance:
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 896107fdcc03cbe4f840528dece5377e,
+      objectReference: {fileID: 11400000, guid: c659e7bf338cb8a438368cd548f6775b,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 67f0c4c37ae07064a9afe55360210e13,
+      objectReference: {fileID: 11400000, guid: 12906724738c0544daf63f180f9f1b98,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: adc5994f80abece43a80be71e40abe9d,
+      objectReference: {fileID: 11400000, guid: 46abaffb205a11a49905d93c47f77b82,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 054965c58b0218548a9b493e582e2f9f,
+      objectReference: {fileID: 11400000, guid: 4e2d601737db6d14d80a92504651152c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 3b65cce023450df44ae6b408fb1cae0f,
+      objectReference: {fileID: 11400000, guid: 029b9985c9f95e649b2f3e64ff8077a3,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -55804,6 +55814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: Name
+      value: Frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
@@ -55815,7 +55830,7 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: starsReqd
-      value: 99
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -55835,42 +55850,42 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.size
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 7b341f6aa4494b64d875876fae9f9305,
+      objectReference: {fileID: 11400000, guid: ebcc191de187a7c4d889c05ec0439c6e,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f279cf9eb75bd564a963b8036a7bcd95,
+      objectReference: {fileID: 11400000, guid: 1a7b94a99c440eb4b80c3233c5198178,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: ef0e0c738e84749479817b7461410934,
+      objectReference: {fileID: 11400000, guid: 3ef445f0e1395f14ea189e8be9e99ab0,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 862e6f6fee6175543a8f12e8803a1a00,
+      objectReference: {fileID: 11400000, guid: 5f862bc1d63830e4b81f18244891afdd,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 1b3fb3f9bf65295418886bbf786189cb,
+      objectReference: {fileID: 11400000, guid: 2e636e2a196ecfa4faad6e04b0b69d40,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -55882,37 +55897,37 @@ PrefabInstance:
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 896107fdcc03cbe4f840528dece5377e,
+      objectReference: {fileID: 11400000, guid: 5bc31d97323b4cb4b97555bf34490782,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 67f0c4c37ae07064a9afe55360210e13,
+      objectReference: {fileID: 11400000, guid: 5e732bc6ff037f249865761ddb7d40b5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: adc5994f80abece43a80be71e40abe9d,
+      objectReference: {fileID: 11400000, guid: 582fbd857cac5e243b43fa86fcc97626,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 054965c58b0218548a9b493e582e2f9f,
+      objectReference: {fileID: 11400000, guid: e3f8a02746408314b9a5e27bb60e20b5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 3b65cce023450df44ae6b408fb1cae0f,
+      objectReference: {fileID: 11400000, guid: c2fb4ff38bef93746a186c3fc3cc422c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 074a259361f088a468c23418bc293fd9,
+      objectReference: {fileID: 11400000, guid: 5297db7574a788a4a9046a17ebdf96d5,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -60862,6 +60877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
+      propertyPath: Name
+      value: Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 78840022}
@@ -60874,6 +60894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
+        type: 3}
+      propertyPath: starsReqd
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -60893,36 +60918,36 @@ PrefabInstance:
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.size
-      value: 14
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 7b341f6aa4494b64d875876fae9f9305,
+      objectReference: {fileID: 11400000, guid: 010a61cb0cee088489873c234b00bb55,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: f279cf9eb75bd564a963b8036a7bcd95,
+      objectReference: {fileID: 11400000, guid: 13ee905dcaf8b2041868dce0260f219c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: ef0e0c738e84749479817b7461410934,
+      objectReference: {fileID: 11400000, guid: 6c7e8380ae99b664db24c855419664b6,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: AfterQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 862e6f6fee6175543a8f12e8803a1a00,
+      objectReference: {fileID: 11400000, guid: 5f75004379265164390204a445296da1,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
@@ -60940,31 +60965,31 @@ PrefabInstance:
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: 896107fdcc03cbe4f840528dece5377e,
+      objectReference: {fileID: 11400000, guid: c659e7bf338cb8a438368cd548f6775b,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 67f0c4c37ae07064a9afe55360210e13,
+      objectReference: {fileID: 11400000, guid: 12906724738c0544daf63f180f9f1b98,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: adc5994f80abece43a80be71e40abe9d,
+      objectReference: {fileID: 11400000, guid: 46abaffb205a11a49905d93c47f77b82,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 11400000, guid: 054965c58b0218548a9b493e582e2f9f,
+      objectReference: {fileID: 11400000, guid: 4e2d601737db6d14d80a92504651152c,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: BeforeQuestDialogueObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 3b65cce023450df44ae6b408fb1cae0f,
+      objectReference: {fileID: 11400000, guid: 029b9985c9f95e649b2f3e64ff8077a3,
         type: 2}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
