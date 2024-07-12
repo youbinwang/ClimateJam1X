@@ -32,6 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6215925277358140569}
+  - {fileID: 269211960681631640}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5119801051321612280
@@ -51,13 +52,14 @@ MonoBehaviour:
   AfterQuestDialogueObjects: []
   dialogueIndex: 0
   trackingInt: 0
+  starsReqd: 0
   Dialogue: {fileID: 0}
   CharacterName: {fileID: 0}
   DialogueText: {fileID: 0}
   CharacterImage: {fileID: 0}
-  nextButton: {fileID: 0}
   dialogueActive: 0
-  Player: {fileID: 0}
+  journal: {fileID: 0}
+  entry: {fileID: 0}
 --- !u!65 &4092886596472214341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79,6 +81,80 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0075102, y: 2.6133428, z: 2}
   m_Center: {x: 0.041871548, y: 0.30667138, z: 0}
+--- !u!1001 &303667138949441651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8204474698325116253}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1bf622115275c8941a3f979d8667c5cf,
+        type: 3}
+      propertyPath: m_Name
+      value: AtlasMoth_Model_v1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1bf622115275c8941a3f979d8667c5cf, type: 3}
+--- !u!4 &269211960681631640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1bf622115275c8941a3f979d8667c5cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 303667138949441651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5300758198293863568
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,7 +3,27 @@ guid: 1bf622115275c8941a3f979d8667c5cf
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: b7023045b7ab57c4fb9f22bb284ed5ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HeadFeatures
+    second: {fileID: 2100000, guid: a0441a2af47186f43a3414eb48978386, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NeckFluff
+    second: {fileID: 2100000, guid: 5388d7b425ec79841a6b24096f30a39a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wings
+    second: {fileID: 2100000, guid: 2cb2957ed00957343928090064cc073c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
