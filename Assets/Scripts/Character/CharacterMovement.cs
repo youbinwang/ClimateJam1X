@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     
     private Rigidbody rb;
     private bool isFlipping = false;
-    public bool canMove = true;
+    [HideInInspector] public bool canMove = true;
     
     [Header("Ground Check")]
     private bool isGrounded;

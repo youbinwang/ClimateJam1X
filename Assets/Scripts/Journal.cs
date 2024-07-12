@@ -20,11 +20,26 @@ public class Journal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (pageAvailable[5])
+        // if (pageAvailable[5])
+        // {
+        //     pageAvailable[6] = true;
+        //     pageAvailable[7] = true;
+        //     pageAvailable[8] = true;
+        // }
+        if (pageAvailable.Length > 5 && pageAvailable[5])
         {
-            pageAvailable[6] = true;
-            pageAvailable[7] = true;
-            pageAvailable[8] = true;
+            if (pageAvailable.Length > 6)
+            {
+                pageAvailable[6] = true;
+            }
+            if (pageAvailable.Length > 7)
+            {
+                pageAvailable[7] = true;
+            }
+            if (pageAvailable.Length > 8)
+            {
+                pageAvailable[8] = true;
+            }
         }
     }
 

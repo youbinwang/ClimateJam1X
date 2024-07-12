@@ -21,10 +21,12 @@ public class Character : MonoBehaviour
     [SerializeField] private TextMeshProUGUI DialogueText;
     [SerializeField] private Image CharacterImage; // face image
 
-    [SerializeField] public Button nextButton; // the "next button" for the dialogue
+    // the "next button" for the dialogue
+    // public Button nextButton;
     public bool dialogueActive;
 
-    public GameObject Player;
+    // What?
+    private GameObject player;
 
     //public TextMeshProUGUI[] journalEntries;
     private Journal journal;
@@ -43,7 +45,7 @@ public class Character : MonoBehaviour
         //    journalEntries[i].enabled = false;
         //}
 
-        Player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         journal = FindObjectOfType<Journal>();
     }
 
