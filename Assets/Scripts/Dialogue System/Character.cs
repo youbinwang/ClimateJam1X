@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -138,7 +139,7 @@ public class Character : MonoBehaviour
         journalIndex = System.Array.IndexOf(journal.journalPages, entry);
         journal.pageAvailable[journalIndex] = true;
 
-        if(journalIndex  % 2 == 0 || journalIndex == 0)
+        if(journalIndex  % 2 == 0 || journalIndex == 0) //checking if the index is even or 0 (odd-numbered pages)
         {
             for(int i = 0; i < journal.journalPages.Length; i++)
             {
@@ -153,7 +154,7 @@ public class Character : MonoBehaviour
             }
         }
 
-        else if (journalIndex % 2 == 1)
+        else if (journalIndex % 2 == 1) //checking if the index is odd (even numbered pages)
         {
             for (int i = 0; i < journal.journalPages.Length; i++)
             {
@@ -165,6 +166,7 @@ public class Character : MonoBehaviour
             if (journal.pageAvailable[journalIndex - 1])
             {
                 journal.journalPages[journalIndex - 1].SetActive(true);
+                Debug.Log("setting previous page active");
             }
         }
     }
