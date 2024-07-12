@@ -36,7 +36,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
-        HideDialouge();
+        HideDialogue();
         dialogueActive = false;
         trackingInt = 0;
 
@@ -56,9 +56,10 @@ public class Character : MonoBehaviour
 
     public void QuestDone() //things to do after the character's quest is complete
     {
-        FindObjectOfType<Interact>().constellationUI.gameObject.SetActive(true);
-        FindObjectOfType<Interact>().closeButton.gameObject.SetActive(true);
-        FindObjectOfType<Interact>().panel.gameObject.SetActive(true);
+        var interact = FindObjectOfType<Interact>();
+        interact.constellationUI.gameObject.SetActive(true);
+        interact.closeButton.gameObject.SetActive(true);
+        interact.panel.gameObject.SetActive(true);
         trackingInt = 1; // switches the tracking int to 1a
         //if(journalEntries.Length > 0)
         //{
@@ -73,27 +74,26 @@ public class Character : MonoBehaviour
 
     public void ShowDialogue() // called by farah's dialogue function. 
     {
-
         dialogueIndex = 0; 
         PlayDialogue();
         Dialogue.gameObject.SetActive(true);
         dialogueActive = true;
-        
     }
-
 
     public void PlayDialogue() // played once the DIALOGUE function is called
     {
         CharacterName.text = Name; // sets the name 
         if (trackingInt == 0 && dialogueIndex >= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex >= AfterQuestDialogueObjects.Length)
         {
-            HideDialouge() ;
-        }else if (trackingInt == 0)
+            HideDialogue() ;
+        }
+        else if (trackingInt == 0)
         {
             DialogueText.text = BeforeQuestDialogueObjects[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
             CharacterName.text = BeforeQuestDialogueObjects[dialogueIndex].GetCharName(); // gets the character name for the dialouge
             CharacterImage.sprite = BeforeQuestDialogueObjects[dialogueIndex].GetCharImage(); // gets the characters' image
-        } else if (trackingInt == 1)
+        }
+        else if (trackingInt == 1)
         {
             DialogueText.text = AfterQuestDialogueObjects[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
             CharacterName.text = AfterQuestDialogueObjects[dialogueIndex].GetCharName(); // gets the character name for the dialouge
@@ -106,7 +106,7 @@ public class Character : MonoBehaviour
     { 
         if (dialogueActive)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (dialogueActive && Input.GetMouseButtonDown(0))
             {
                 if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <= AfterQuestDialogueObjects.Length)
                 {
@@ -116,17 +116,21 @@ public class Character : MonoBehaviour
                 else
                 {
                     dialogueIndex = 0; // resets dialogue to 0 
-                    HideDialouge();
+                    HideDialogue();
                 }
             }
         }
     }
 
-    public void HideDialouge() // called once it reaches the end of a sequence 
+    public void HideDialogue() // called once it reaches the end of a sequence 
     {
         Dialogue.gameObject.SetActive(false);
         dialogueIndex = 0;
-        FindObjectOfType<Interact>().EndDialogue();
+        var interact = FindObjectOfType<Interact>();
+        if (interact != null)
+        {
+            interact.EndDialogue();
+        }
     }
 
     public void UpdateJournal()

@@ -115,7 +115,11 @@ public class Interact : MonoBehaviour
         
         yield return new WaitForSeconds(1.25f);
         CollectStar();
-        EndDialogue();
+        // EndDialogue();
+        if (!other.gameObject.CompareTag("NPC"))
+        {
+            EndDialogue();
+        }
     }
     
     void CollectStar()
@@ -133,9 +137,9 @@ public class Interact : MonoBehaviour
     
     public void CloseConstellationUI()
     {
-        constellationUI.gameObject.SetActive(false);    
-        closeButton.gameObject.SetActive(false);
-        panel.gameObject.SetActive(false);
+        constellationUI.SetActive(false);    
+        closeButton.SetActive(false);
+        panel.SetActive(false);
     }
     
     public void EndDialogue()
