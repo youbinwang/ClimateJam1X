@@ -29,9 +29,6 @@ public class MothAnimation : MonoBehaviour
                 currentAnimationIndex--; 
             }
 
-            Debug.Log("Current Animation Index: " + currentAnimationIndex);
-            Debug.Log("IdleSwitchCounter: " + animator.GetInteger("IdleSwitchCounter"));
-
             yield return new WaitForSeconds(switchInterval);
         }
     }
