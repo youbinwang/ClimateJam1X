@@ -18,18 +18,15 @@ public class MothAnimation : MonoBehaviour
     {
         while (true)
         {
-            // Toggle between IdleAnimation1 and IdleAnimation2 based on currentAnimationIndex
             if (currentAnimationIndex == 1)
             {
-                animator.SetInteger("IdleSwitchCounter", 1); // Set parameter for IdleAnimation1
-                Debug.Log("Switching to IdleAnimation1");
-                currentAnimationIndex++; // Switch to IdleAnimation2 next
+                animator.SetInteger("IdleSwitchCounter", 1); 
+                currentAnimationIndex++; 
             }
             else if (currentAnimationIndex == 2)
             {
-                animator.SetInteger("IdleSwitchCounter", 2); // Set parameter for IdleAnimation2
-                Debug.Log("Switching to IdleAnimation2");
-                currentAnimationIndex--; // Switch to IdleAnimation1 next
+                animator.SetInteger("IdleSwitchCounter", 2); 
+                currentAnimationIndex--; 
             }
 
             Debug.Log("Current Animation Index: " + currentAnimationIndex);
