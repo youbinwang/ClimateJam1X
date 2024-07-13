@@ -22,6 +22,9 @@ public class Character : MonoBehaviour
     [SerializeField] private TextMeshProUGUI DialogueText;
     [SerializeField] private Image CharacterImage; // face image
 
+    [SerializeField] public String EncounterSound;
+    [SerializeField] public String TalkingSound;
+
     // the "next button" for the dialogue
     // public Button nextButton;
     public bool dialogueActive;
@@ -79,11 +82,13 @@ public class Character : MonoBehaviour
         PlayDialogue();
         Dialogue.gameObject.SetActive(true);
         dialogueActive = true;
+        FindObjectOfType<AudioManager>().Play(EncounterSound); // plays the encounter sound 
     }
 
     public void PlayDialogue() // played once the DIALOGUE function is called
     {
         CharacterName.text = Name; // sets the name 
+        
         if (trackingInt == 0 && dialogueIndex >= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex >= AfterQuestDialogueObjects.Length)
         {
             HideDialogue() ;
@@ -109,10 +114,13 @@ public class Character : MonoBehaviour
         {
             if (dialogueActive && Input.GetMouseButtonDown(0))
             {
+                FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
+                Debug.Log("Played talking sound");
                 if (trackingInt == 0 && dialogueIndex <= BeforeQuestDialogueObjects.Length || trackingInt == 1 && dialogueIndex <= AfterQuestDialogueObjects.Length)
                 {
                     dialogueIndex++; // increases the index 
                     PlayDialogue();
+                    
                 }
                 else
                 {
@@ -132,11 +140,12 @@ public class Character : MonoBehaviour
         {
             interact.EndDialogue();
         }
+        FindObjectOfType<AudioManager>().Stop(EncounterSound); // stops the encounter sound 
     }
 
     public void UpdateJournal()
     {
-        journalIndex = System.Array.IndexOf(journal.journalPages, entry);
+       /* journalIndex = System.Array.IndexOf(journal.journalPages, entry);
         journal.pageAvailable[journalIndex] = true;
 
         if(journalIndex  % 2 == 0 || journalIndex == 0) //checking if the index is even or 0 (odd-numbered pages)
@@ -169,5 +178,7 @@ public class Character : MonoBehaviour
                 Debug.Log("setting previous page active");
             }
         }
+       */
     }
+   
 }

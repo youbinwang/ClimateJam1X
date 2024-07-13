@@ -12,12 +12,15 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    public String currentAudio;
+
     public static AudioManager instance;
 
     void Start()
     {
-        PlaySoundBasedOnScene();
-        //Play("Ambient2");
+    
+        Play("Intro Loop");
+        currentAudio = "Intro Loop";
         // what the above does is basically plays something all the way through. 
     }
 
@@ -43,34 +46,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
-    public void PlaySoundBasedOnScene()
-    {
-        string name = SceneManager.GetActiveScene().name;
-        if (name == "Title Screen")
-        {
-            PlayFade("TitleScreen");
-        }
-        else if (name == "Assignment")
-        {
-            StopFade("TitleScreen");
-            PlayFade("Assignment");
-        }
-        else if (name == "MainScene")
-        {
-            StopFade("Transition");
-            PlayFade("Ambient1");
-        }
-        else if (name == "Wasteland")
-        {
-            StopFade("Transition");
-            PlayFade("Wasteland");
-        }
-        else if (name == "LoadingToWasteland" || name == "LoadingToObservatory")
-        {
-            PlayFade("Transition");
-        }
-    }
 
     public void StartFadeOutAll()
     {
