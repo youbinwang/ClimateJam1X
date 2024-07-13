@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
-  m_Name: Turtle A2
+  m_Name: Mayor 13
   m_EditorClassIdentifier: 
-  nodeText: "You\u2019re welcome! I am on a mission to be able to see the stars in
-    the sky for myself, so it was really no problem."
+  nodeText: "AND not to mention I want to see what the stars look like! It isn\u2019t
+    fair that I don\u2019t get to see how pretty they are up in the night sky!"
   charName: Thalia
   charImage: {fileID: 0}

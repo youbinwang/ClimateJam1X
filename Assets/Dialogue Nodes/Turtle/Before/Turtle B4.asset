@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Turtle B4
   m_EditorClassIdentifier: 
-  nodeText: Of course! ... The artificial lights must be disrupting this turtle.
-    I've got to help her!
-  charName: Thalia
-  charImage: {fileID: 21300000, guid: 391356a55d0cfd14bbf3f9b19dd763ef, type: 3}
+  nodeText: "All of the bright lights around the beach! Even I was confused when
+    I came up on shore but at least I\u2019ve lived long enough to remember when
+    it was just the moon and stars in the sky that guided me ashore! My poor babies
+    have no chance of making it to the water."
+  charName: Tortellie
+  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

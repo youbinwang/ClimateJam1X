@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Turtle A3
   m_EditorClassIdentifier: 
-  nodeText: 'Hmm... I heard the mayor was having a town hall about STAR energy tonight. '
+  nodeText: "Thank you, darling, really. You\u2019re a pearl. Now, if I weren't busy
+    with my nesting I would go right up to whoever put these lights us and give \u2018em
+    a piece of my mind!"
   charName: Turtle
   charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}

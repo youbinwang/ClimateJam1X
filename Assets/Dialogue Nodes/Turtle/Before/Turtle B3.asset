@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Turtle B3
   m_EditorClassIdentifier: 
-  nodeText: Let's go see the mayor now!
-  charName: Turtle
+  nodeText: Huh? What do you mean?
+  charName: Thalia
   charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
