@@ -8267,7 +8267,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===StreetLight===
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1219805469904649900, guid: 2d386a35728680d40b0b4b1efeadac74, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8544,7 +8545,6 @@ GameObject:
   - component: {fileID: 7785169562077785908}
   - component: {fileID: 6603862469261353105}
   - component: {fileID: 8953532799714563163}
-  - component: {fileID: 8953532799714563165}
   - component: {fileID: 8953532799714563164}
   m_Layer: 0
   m_Name: ===Star===
@@ -8632,24 +8632,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -462981019419857548, guid: d05945048f8fda849a41f4c1405a5912, type: 3}
---- !u!114 &8953532799714563165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7440415889274713486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20b6a8ee748866e4ca91a22a1fb44194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starCount: 0
-  ePopup: {fileID: 703906273}
-  constellationUI: {fileID: 0}
-  closeButton: {fileID: 0}
-  panel: {fileID: 0}
-  starCountUIText: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
