@@ -15,6 +15,8 @@ public class Interact : MonoBehaviour
 
     private CharacterMovement characterMovement;
     private CharacterAnimation characterAnimation;
+
+    private Vector3 savePoint;
     
     void Start()
     {
@@ -27,6 +29,13 @@ public class Interact : MonoBehaviour
         starCount = 0;
     }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.R))
+        {
+            gameObject.transform.position = savePoint;
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         ePopup.SetActive(true);
@@ -74,6 +83,12 @@ public class Interact : MonoBehaviour
                 StartCoroutine(HandleCollectStar(other));
                 other.gameObject.SetActive(false);
             }
+
+            if (other.gameObject.CompareTag("Checkpoint"))
+            {
+                savePoint = gameObject.GetComponent<Transform>().position;
+            }
+
             ePopup.SetActive(false);
         }
     }
