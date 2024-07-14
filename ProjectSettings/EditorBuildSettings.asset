@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gym.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Title.unity
     guid: 267180d54a6ac94498b443883aa3814d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Demo Map.unity
     guid: 9a6370a5687eb104aa8c1ece84ba56e5
+  - enabled: 1
+    path: Assets/Scenes/Level_Game.unity
+    guid: 54a96ee0fb7704ccb98e4032243b2ac5
   m_configObjects: {}
