@@ -50,7 +50,6 @@ public class Character : MonoBehaviour
         //}
 
         player = GameObject.FindGameObjectWithTag("Player");
-        journal = FindObjectOfType<Journal>();
     }
 
     void Update()
@@ -145,7 +144,7 @@ public class Character : MonoBehaviour
 
     public void UpdateJournal()
     {
-       /* journalIndex = System.Array.IndexOf(journal.journalPages, entry);
+       journalIndex = System.Array.IndexOf(journal.journalPages, entry);
         journal.pageAvailable[journalIndex] = true;
 
         if(journalIndex  % 2 == 0 || journalIndex == 0) //checking if the index is even or 0 (odd-numbered pages)
@@ -178,7 +177,6 @@ public class Character : MonoBehaviour
                 Debug.Log("setting previous page active");
             }
         }
-       */
     }
    
 }

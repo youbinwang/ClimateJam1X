@@ -1525,6 +1525,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.0000001, z: 1}
   m_Center: {x: 0.0000019073486, y: 0, z: 0}
+--- !u!1 &49133204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7314799512036578541, guid: 9e7dd8ec81ed7eb428a3e85aba86296e,
+    type: 3}
+  m_PrefabInstance: {fileID: 885774506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &49710061
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,7 +18063,7 @@ PrefabInstance:
         type: 3}
       propertyPath: entry
       value: 
-      objectReference: {fileID: 113971451}
+      objectReference: {fileID: 49133204}
     - target: {fileID: 8391208127616782567, guid: efaaf3ff6d0082846ba972a669853824,
         type: 3}
       propertyPath: journal
@@ -45802,7 +45808,7 @@ PrefabInstance:
         type: 3}
       propertyPath: entry
       value: 
-      objectReference: {fileID: 2084570249}
+      objectReference: {fileID: 86112648}
     - target: {fileID: 5119801051321612280, guid: b1f51943de4230b438a1da623ae2eb65,
         type: 3}
       propertyPath: Player
