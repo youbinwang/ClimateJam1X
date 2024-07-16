@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: "But you ran into me\u2026"
   charName: Thalia
-  charImage: {fileID: 21300000, guid: 391356a55d0cfd14bbf3f9b19dd763ef, type: 3}
+  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}

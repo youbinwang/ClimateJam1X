@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: "Ah well, you know- I guess I didn\u2019t realize..."
   charName: Mr. Mayor
-  charImage: {fileID: 0}
+  charImage: {fileID: 21300000, guid: bddc9c4bc49d4aa4a84d7e81dc15ad90, type: 3}

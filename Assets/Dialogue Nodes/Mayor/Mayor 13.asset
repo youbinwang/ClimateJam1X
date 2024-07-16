@@ -15,4 +15,4 @@ MonoBehaviour:
   nodeText: "AND not to mention I want to see what the stars look like! It isn\u2019t
     fair that I don\u2019t get to see how pretty they are up in the night sky!"
   charName: Thalia
-  charImage: {fileID: 0}
+  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}

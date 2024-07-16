@@ -19,4 +19,4 @@ MonoBehaviour:
     babies will make it to the sea, now that all the stars are back in their proper
     place!\n"
   charName: Thalia
-  charImage: {fileID: 0}
+  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}

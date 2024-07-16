@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Turtle A1
   m_EditorClassIdentifier: 
   nodeText: All the bright lights are gone! Oh, thank you so much!
-  charName: Turtle
-  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
+  charName: Turtellie
+  charImage: {fileID: 21300000, guid: 402191602ef4d0349aa63bb0bdf7787a, type: 3}

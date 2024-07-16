@@ -15,4 +15,4 @@ MonoBehaviour:
   nodeText: "Maybe life has improved FOR YOU, but have you ever even taken a step
     out of this building to see how it\u2019s affecting the animals in town?"
   charName: Thalia
-  charImage: {fileID: 0}
+  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}

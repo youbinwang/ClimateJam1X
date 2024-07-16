@@ -15,5 +15,5 @@ MonoBehaviour:
   nodeText: "Thank you, darling, really. You\u2019re a pearl. Now, if I weren't busy
     with my nesting I would go right up to whoever put these lights us and give \u2018em
     a piece of my mind!"
-  charName: Turtle
-  charImage: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
+  charName: Turtellie
+  charImage: {fileID: 21300000, guid: 402191602ef4d0349aa63bb0bdf7787a, type: 3}

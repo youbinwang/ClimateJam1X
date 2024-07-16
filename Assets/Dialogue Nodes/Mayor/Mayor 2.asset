@@ -15,4 +15,4 @@ MonoBehaviour:
   nodeText: Well hello Kiddo! Yes, I'm the mayor of this here town. What seems to
     be the matter?
   charName: Mr. Mayor
-  charImage: {fileID: 0}
+  charImage: {fileID: 21300000, guid: bddc9c4bc49d4aa4a84d7e81dc15ad90, type: 3}
