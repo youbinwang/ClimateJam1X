@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plastic
+  m_Name: Plastic 1
   m_Shader: {fileID: 4800000, guid: a99b0e2781c58744dafd9368ff881a36, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -62,9 +62,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BaseHue: 0.46
+    - _BaseHue: 0.435
     - _BaseSaturation: 1
-    - _BaseValue: 1
+    - _BaseValue: 0.043
     - _BrushVariation: 0.153
     - _ColorVariation: 0.176
     - _EnvironmentReflections: 1

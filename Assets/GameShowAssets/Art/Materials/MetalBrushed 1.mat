@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plastic
+  m_Name: MetalBrushed 1
   m_Shader: {fileID: 4800000, guid: a99b0e2781c58744dafd9368ff881a36, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -16,7 +16,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -28,15 +28,15 @@ Material:
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e9353cd3de828be4b87a93c8aa897d01, type: 3}
+        m_Texture: {fileID: 2800000, guid: 05f66e1975bde044a8e7dbb697647235, type: 3}
         m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _Smoothness:
-        m_Texture: {fileID: 2800000, guid: b1fd709f170fa334c9fabb83b2138acd, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 2800000, guid: 6786356587b2d82419283397486ddd66, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _SmoothnessMap:
-        m_Texture: {fileID: 2800000, guid: b1fd709f170fa334c9fabb83b2138acd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6786356587b2d82419283397486ddd66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
@@ -62,24 +62,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BaseHue: 0.46
-    - _BaseSaturation: 1
+    - _BaseHue: 0.084
+    - _BaseSaturation: 0
     - _BaseValue: 1
-    - _BrushVariation: 0.153
-    - _ColorVariation: 0.176
+    - _BrushVariation: 0.3
+    - _ColorVariation: 0.1
     - _EnvironmentReflections: 1
-    - _Float2: 1
-    - _HueShift: 0.219
-    - _Metallic: 0
+    - _Float2: 0.7
+    - _HueShift: 0.55
+    - _Metallic: 1
     - _NormalScale: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Saturation: 0.936
-    - _Smooth: 0.8
+    - _Saturation: 0.163
+    - _Smooth: 0.7
     - _SmoothRangeEnd: 1
-    - _SmoothRangeStart: 0
-    - _Smoothness: 0.7
+    - _SmoothRangeStart: 0.7
+    - _Smoothness: 0.8
     - _SpecularHighlights: 1
     - _TessEdgeLength: 16
     - _TessMax: 25
@@ -97,7 +97,7 @@ Material:
     - _TriplanarTilingScale: 1
     - _UseLocalPosition: 0
     - _UseLocalPosition1: 0
-    - _Value: 0.902
+    - _Value: 0.7
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Plastic
+  m_Name: Bricks 1
   m_Shader: {fileID: 4800000, guid: a99b0e2781c58744dafd9368ff881a36, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 0.1, y: 0.1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: e9353cd3de828be4b87a93c8aa897d01, type: 3}
+        m_Texture: {fileID: 2800000, guid: 891efbe20891b1540b32bffc0c733397, type: 3}
         m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _Smoothness:
@@ -36,7 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SmoothnessMap:
-        m_Texture: {fileID: 2800000, guid: b1fd709f170fa334c9fabb83b2138acd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 27e3113f61e554c4b9b8270b86b5ecc3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _TextureSample0:
@@ -62,11 +62,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BaseHue: 0.46
-    - _BaseSaturation: 1
-    - _BaseValue: 1
-    - _BrushVariation: 0.153
-    - _ColorVariation: 0.176
+    - _BaseHue: 0.16
+    - _BaseSaturation: 0
+    - _BaseValue: 0.045
+    - _BrushVariation: 0.1
+    - _ColorVariation: 1
     - _EnvironmentReflections: 1
     - _Float2: 1
     - _HueShift: 0.219
