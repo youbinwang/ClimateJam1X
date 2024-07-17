@@ -95,6 +95,14 @@ public class Interact : MonoBehaviour
                 checkpointStored = true;
             }
 
+            if (other.gameObject.CompareTag("Telescope"))
+            {
+                GameObject mainCamera = GameObject.FindWithTag("MainCamera");
+                mainCamera.SetActive(false);
+                GameObject telescopeCamera = GameObject.FindWithTag("TelescopeCamera");
+                telescopeCamera.SetActive(true);
+            }
+
             ePopup.SetActive(false);
         }
     }

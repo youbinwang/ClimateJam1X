@@ -8,6 +8,8 @@ TagManager:
   - Star
   - Foreground
   - Checkpoint
+  - Telescope
+  - TelescopeCamera
   layers:
   - Default
   - TransparentFX
