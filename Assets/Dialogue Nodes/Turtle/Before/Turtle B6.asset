@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: "No, darling. We sea turtles use the moon reflected on the water to see
     where we need to go. Oh, I just don\u2019t know what to do\u2026"
-  charName: Turtellie
+  charName: Shellie
   charImage: {fileID: 21300000, guid: b4eebbb5e9f33eb44a5be77672ae2530, type: 3}
