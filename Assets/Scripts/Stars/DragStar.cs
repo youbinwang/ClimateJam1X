@@ -10,7 +10,9 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
     private RectTransform draggingPlane; // plane it gets dragged on? 
     private Vector2 offset;
     private bool isDragging;
-    private bool isDraggable; 
+    private bool isDraggable;
+
+    [SerializeField] private bool isTelescope;
 
     // Start is called before the first frame update
     void Start()
@@ -64,8 +66,17 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
             isDraggable = false;
-            other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
-            Debug.Log("Connections Shown");
+
+            if(isTelescope)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<IntroScene>().ShowDialogue();
+            }
+            else
+            {
+                other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+                Debug.Log("Connections Shown");
+            }
         }
     }
 
@@ -76,8 +87,17 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
             isDraggable = false;
-            other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
-            Debug.Log("Connections Shown");
+
+            if (isTelescope)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<IntroScene>().ShowDialogue();
+            }
+            else
+            {
+                other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+                Debug.Log("Connections Shown");
+            }
         }
     }
 

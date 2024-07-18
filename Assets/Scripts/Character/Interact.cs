@@ -95,12 +95,14 @@ public class Interact : MonoBehaviour
                 checkpointStored = true;
             }
 
+            if (other.gameObject.CompareTag("Book"))
+            {
+                StartCoroutine(HandleDialogue(other));
+            }
+
             if (other.gameObject.CompareTag("Telescope"))
             {
-                GameObject mainCamera = GameObject.FindWithTag("MainCamera");
-                mainCamera.SetActive(false);
-                GameObject telescopeCamera = GameObject.FindWithTag("TelescopeCamera");
-                telescopeCamera.SetActive(true);
+                StartCoroutine(HandleDialogue(other));
             }
 
             ePopup.SetActive(false);
@@ -132,8 +134,18 @@ public class Interact : MonoBehaviour
         yield return new WaitForSeconds(1.25f);
 
         characterAnimation.SetIdleState();
-        Character dialogueScript = other.gameObject.GetComponent<Character>();
-        dialogueScript.ShowDialogue();
+
+        if (other.CompareTag("NPC"))
+        {
+            Character dialogueScript = other.gameObject.GetComponent<Character>();
+            dialogueScript.ShowDialogue();
+        }
+
+        if (other.CompareTag("Book") || other.CompareTag("Telescope"))
+        {
+            IntroScene dialogueScript = this.gameObject.GetComponent<IntroScene>();
+            dialogueScript.ShowDialogue();
+        }
     }
 
     private IEnumerator HandleCollectStar(Collider other)

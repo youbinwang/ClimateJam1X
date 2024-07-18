@@ -8,9 +8,12 @@ using UnityEngine.UI;
 
 public class IntroScene : MonoBehaviour
 {
-    [SerializeField] private DialogueObject[] Looking; // Thalia's dialogue that plays while she looks through the telescope to a blank sky
+    [SerializeField] private DialogueObject[] Prologue; //Thalia's dialogue outside the observatory
+    
+    [SerializeField] private DialogueObject[] Entered; //Thalia's dialogue that plays right at the beginning prompting her to look for the book
+    [SerializeField] private DialogueObject[] Looking; // Thalia's dialogue that plays while she looks at the book
     [SerializeField] private DialogueObject[] AfterLooking; // Thalia's dialogue after seeing the empty sky, discussing the book
-    [SerializeField] private DialogueObject[] PromptTown; //Thalia's dialogue prompting the player to go to town. Plays while the player looks at the town through the telescope, may have the main camera turn back on for the last line so the player really knows to go left, but thats a problem for tomorrow Farah to figure out
+    [SerializeField] private DialogueObject[] PromptTown; //Thalia's dialogue prompting the player to go to town
 
     public int dialogueIndex; // index for the dialouge node IN THE ARRAY. NOT the same thing as the tracking int. 
     public int trackingInt; // int that keeps track of game state - triggers certain dialogue when this int is reached. (tracking ints are basically the quest system) 0 is BEFORE QUEST and 1 is AFTER QUEST
@@ -24,6 +27,14 @@ public class IntroScene : MonoBehaviour
 
     [SerializeField] public String TalkingSound;
 
+    [SerializeField] private GameObject starUI;
+
+    [SerializeField] private GameObject telescopeTrigger;
+    [SerializeField] private Image bookUI;
+
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private Camera telescopeCamera;
+
     public bool dialogueActive;
     void Start()
     {
@@ -31,6 +42,12 @@ public class IntroScene : MonoBehaviour
         HideDialogue();
         dialogueActive = false;
         trackingInt = 0;
+        telescopeTrigger.SetActive(false);
+        this.gameObject.GetComponent<CharacterMovement>().canMove = false;
+
+        starUI.SetActive(false);
+
+        ShowDialogue();
     }
 
     // Update is called once per frame
@@ -41,7 +58,7 @@ public class IntroScene : MonoBehaviour
 
     public void ShowDialogue() // called by farah's dialogue function. 
     {
-        dialogueIndex++;
+        dialogueIndex = 0;
         PlayDialogue();
         Dialogue.gameObject.SetActive(true);
         dialogueActive = true;
@@ -52,19 +69,40 @@ public class IntroScene : MonoBehaviour
         CharacterName.text = "Thalia"; // sets the name 
         CharacterImage.sprite = ThaliaFace;
 
-        if (trackingInt == 0 && dialogueIndex >= Looking.Length || trackingInt == 1 && dialogueIndex >= AfterLooking.Length || trackingInt == 2 && dialogueIndex >= PromptTown.Length)
+        if (trackingInt == 0 && dialogueIndex >= Prologue.Length || trackingInt == 1 && dialogueIndex >= Entered.Length || trackingInt == 2 && dialogueIndex >= Looking.Length || trackingInt == 3 && dialogueIndex >= AfterLooking.Length || trackingInt == 4 && dialogueIndex >= PromptTown.Length)
         {
             HideDialogue();
         }
         else if (trackingInt == 0)
         {
-            DialogueText.text = Looking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            DialogueText.text = Prologue[dialogueIndex].GetNodeText();
         }
         else if (trackingInt == 1)
         {
-            DialogueText.text = AfterLooking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            DialogueText.text = Entered[dialogueIndex].GetNodeText();
         }
         else if (trackingInt == 2)
+        {
+            DialogueText.text = Looking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            if(dialogueIndex == 1)
+            {
+                bookUI.gameObject.SetActive(true);
+            }
+        }
+        else if (trackingInt == 3)
+        {
+            DialogueText.text = AfterLooking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
+            if(dialogueIndex == 1)
+            {
+                mainCamera.enabled = false;
+                telescopeCamera.enabled = true;
+            }
+            if(dialogueIndex == 3)
+            {
+                bookUI.gameObject.SetActive(true);
+            }
+        }
+        else if (trackingInt == 4)
         {
             DialogueText.text = PromptTown[dialogueIndex].GetNodeText();
         }
@@ -78,7 +116,7 @@ public class IntroScene : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
                 Debug.Log("Played talking sound");
-                if (trackingInt == 0 && dialogueIndex <= Looking.Length || trackingInt == 1 && dialogueIndex <= AfterLooking.Length || trackingInt == 2 && dialogueIndex <= PromptTown.Length)
+                if (trackingInt == 0 && dialogueIndex <= Prologue.Length || trackingInt == 1 && dialogueIndex <= Entered.Length || trackingInt == 2 && dialogueIndex <= Looking.Length || trackingInt == 3 && dialogueIndex <= AfterLooking.Length || trackingInt == 4 && dialogueIndex <= PromptTown.Length)
                 {
                     dialogueIndex++; // increases the index 
                     PlayDialogue();
@@ -87,7 +125,19 @@ public class IntroScene : MonoBehaviour
                 else
                 {
                     dialogueIndex = 0; // resets dialogue to 0 
-                    HideDialogue(); // i need to change this so each set of dialogue plays in a sequence timed with the telescope and stuff but my brain needs to be functioning properly for me to do that so this is my reminder to myself for wednesday
+
+                    if(trackingInt == 2 || trackingInt == 3)
+                    {
+                        bookUI.gameObject.SetActive(false);
+                    }
+                    if(trackingInt == 4)
+                    {
+                        telescopeCamera.gameObject.SetActive(false);
+                        mainCamera.gameObject.SetActive(true);
+
+                        starUI.gameObject.SetActive(true);
+                    }
+                    HideDialogue();
                 }
             }
         }
@@ -97,10 +147,8 @@ public class IntroScene : MonoBehaviour
     {
         Dialogue.gameObject.SetActive(false);
         dialogueIndex = 0;
-        var interact = FindObjectOfType<Interact>();
-        if (interact != null)
-        {
-            interact.EndDialogue();
-        }
+        trackingInt++;
+
+        this.gameObject.GetComponent<Interact>().EndDialogue();
     }
 }
