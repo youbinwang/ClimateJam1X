@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: 'And watch out for the tall platforms! They''re too big for me to leap
     across, but you can press W to climb them. '
-  charName: Frog
+  charName: Frogert
   charImage: {fileID: 21300000, guid: 51ea95dfc22460b4887ee0d922666ef7, type: 3}

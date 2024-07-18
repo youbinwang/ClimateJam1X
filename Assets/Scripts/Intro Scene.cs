@@ -43,6 +43,8 @@ public class IntroScene : MonoBehaviour
     public GameObject introColliders;
 
     public bool dialogueIsActive;
+
+    public bool introDone;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
@@ -55,7 +57,10 @@ public class IntroScene : MonoBehaviour
 
         moveableTelescope.GetComponent<DragStar>().enabled = false;
 
-        StartCoroutine(this.gameObject.GetComponent<Interact>().HandleDialogue(telescopeTrigger.GetComponent<Collider>()));
+        introDone = false;
+
+        ShowDialogue();
+        //StartCoroutine(this.gameObject.GetComponent<Interact>().HandleDialogue(telescopeTrigger.GetComponent<Collider>()));
     }
 
     // Update is called once per frame
@@ -140,6 +145,7 @@ public class IntroScene : MonoBehaviour
                     if(trackingInt == 0)
                     {
                         this.gameObject.GetComponent<Transform>().position = insidePosition;
+                        introDone = true;
                     }
 
                     if(trackingInt == 2)
