@@ -28,24 +28,32 @@ public class IntroScene : MonoBehaviour
     [SerializeField] public String TalkingSound;
 
     [SerializeField] private GameObject starUI;
+    [SerializeField] private GameObject journalUI;
 
     [SerializeField] private GameObject telescopeTrigger;
-    [SerializeField] private Image bookUI;
+    [SerializeField] private GameObject bookUI;
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Camera telescopeCamera;
+    [SerializeField] private GameObject telescopeView;
+
+    [SerializeField] private Vector3 insidePosition;
+
+    public GameObject introColliders;
 
     public bool dialogueActive;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
-        HideDialogue();
-        dialogueActive = false;
         trackingInt = 0;
+
         telescopeTrigger.SetActive(false);
         this.gameObject.GetComponent<CharacterMovement>().canMove = false;
 
         starUI.SetActive(false);
+        journalUI.SetActive(false);
+
+        telescopeView.GetComponent<DragStar>().enabled = false;
 
         ShowDialogue();
     }
@@ -66,7 +74,7 @@ public class IntroScene : MonoBehaviour
 
     public void PlayDialogue() // played once the DIALOGUE function is called
     {
-        CharacterName.text = "Thalia"; // sets the name 
+        CharacterName.text = "Thalia";
         CharacterImage.sprite = ThaliaFace;
 
         if (trackingInt == 0 && dialogueIndex >= Prologue.Length || trackingInt == 1 && dialogueIndex >= Entered.Length || trackingInt == 2 && dialogueIndex >= Looking.Length || trackingInt == 3 && dialogueIndex >= AfterLooking.Length || trackingInt == 4 && dialogueIndex >= PromptTown.Length)
@@ -96,6 +104,7 @@ public class IntroScene : MonoBehaviour
             {
                 mainCamera.enabled = false;
                 telescopeCamera.enabled = true;
+                telescopeView.SetActive(true);
             }
             if(dialogueIndex == 3)
             {
@@ -114,7 +123,7 @@ public class IntroScene : MonoBehaviour
         {
             if (dialogueActive && Input.GetMouseButtonDown(0))
             {
-                FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
+                // FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
                 Debug.Log("Played talking sound");
                 if (trackingInt == 0 && dialogueIndex <= Prologue.Length || trackingInt == 1 && dialogueIndex <= Entered.Length || trackingInt == 2 && dialogueIndex <= Looking.Length || trackingInt == 3 && dialogueIndex <= AfterLooking.Length || trackingInt == 4 && dialogueIndex <= PromptTown.Length)
                 {
@@ -126,16 +135,31 @@ public class IntroScene : MonoBehaviour
                 {
                     dialogueIndex = 0; // resets dialogue to 0 
 
-                    if(trackingInt == 2 || trackingInt == 3)
+                    if(trackingInt == 0)
+                    {
+                        this.gameObject.GetComponent<Transform>().position = insidePosition;
+                    }
+
+                    if(trackingInt == 2)
                     {
                         bookUI.gameObject.SetActive(false);
+                        telescopeTrigger.SetActive(true);
+                    }
+
+                    if(trackingInt == 3)
+                    {
+                        bookUI.gameObject.SetActive(false);
+                        telescopeView.GetComponent<DragStar>().enabled = true;
                     }
                     if(trackingInt == 4)
                     {
                         telescopeCamera.gameObject.SetActive(false);
+                        telescopeView.gameObject.SetActive(false);
                         mainCamera.gameObject.SetActive(true);
 
                         starUI.gameObject.SetActive(true);
+                        journalUI.gameObject.SetActive(true);
+                        introColliders.SetActive(false);
                     }
                     HideDialogue();
                 }
@@ -150,5 +174,14 @@ public class IntroScene : MonoBehaviour
         trackingInt++;
 
         this.gameObject.GetComponent<Interact>().EndDialogue();
+
+        if(trackingInt == 1)
+        {
+            ShowDialogue();
+        }
+        if(trackingInt == 4)
+        {
+            this.gameObject.GetComponent<IntroScene>().enabled = false;
+        }
     }
 }
