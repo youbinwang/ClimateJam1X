@@ -40,7 +40,7 @@ public class Character : MonoBehaviour
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
-        HideDialogue();
+        //HideDialogue();
         dialogueActive = false;
         trackingInt = 0;
 

@@ -36,26 +36,26 @@ public class IntroScene : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     [SerializeField] private Camera telescopeCamera;
     [SerializeField] private GameObject telescopeView;
+    [SerializeField] private GameObject moveableTelescope;
 
     [SerializeField] private Vector3 insidePosition;
 
     public GameObject introColliders;
 
-    public bool dialogueActive;
+    public bool dialogueIsActive;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
         trackingInt = 0;
 
         telescopeTrigger.SetActive(false);
-        this.gameObject.GetComponent<CharacterMovement>().canMove = false;
 
         starUI.SetActive(false);
         journalUI.SetActive(false);
 
-        telescopeView.GetComponent<DragStar>().enabled = false;
+        moveableTelescope.GetComponent<DragStar>().enabled = false;
 
-        ShowDialogue();
+        StartCoroutine(this.gameObject.GetComponent<Interact>().HandleDialogue(telescopeTrigger.GetComponent<Collider>()));
     }
 
     // Update is called once per frame
@@ -69,7 +69,7 @@ public class IntroScene : MonoBehaviour
         dialogueIndex = 0;
         PlayDialogue();
         Dialogue.gameObject.SetActive(true);
-        dialogueActive = true;
+        dialogueIsActive = true;
     }
 
     public void PlayDialogue() // played once the DIALOGUE function is called
@@ -94,7 +94,7 @@ public class IntroScene : MonoBehaviour
             DialogueText.text = Looking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
             if(dialogueIndex == 1)
             {
-                bookUI.gameObject.SetActive(true);
+                bookUI.SetActive(true);
             }
         }
         else if (trackingInt == 3)
@@ -108,7 +108,7 @@ public class IntroScene : MonoBehaviour
             }
             if(dialogueIndex == 3)
             {
-                bookUI.gameObject.SetActive(true);
+                bookUI.SetActive(true);
             }
         }
         else if (trackingInt == 4)
@@ -119,13 +119,15 @@ public class IntroScene : MonoBehaviour
 
     public void NextState()
     {
-        if (dialogueActive)
+        Debug.Log("NextState Called");
+        if (dialogueIsActive)
         {
-            if (dialogueActive && Input.GetMouseButtonDown(0))
+            Debug.Log("dialogue working");
+            if (Input.GetMouseButtonDown(0))
             {
                 // FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
                 Debug.Log("Played talking sound");
-                if (trackingInt == 0 && dialogueIndex <= Prologue.Length || trackingInt == 1 && dialogueIndex <= Entered.Length || trackingInt == 2 && dialogueIndex <= Looking.Length || trackingInt == 3 && dialogueIndex <= AfterLooking.Length || trackingInt == 4 && dialogueIndex <= PromptTown.Length)
+                if ((trackingInt == 0 && dialogueIndex <= Prologue.Length) || (trackingInt == 1 && dialogueIndex <= Entered.Length) || (trackingInt == 2 && dialogueIndex <= Looking.Length) || (trackingInt == 3 && dialogueIndex <= AfterLooking.Length) || (trackingInt == 4 && dialogueIndex <= PromptTown.Length))
                 {
                     dialogueIndex++; // increases the index 
                     PlayDialogue();
@@ -142,14 +144,14 @@ public class IntroScene : MonoBehaviour
 
                     if(trackingInt == 2)
                     {
-                        bookUI.gameObject.SetActive(false);
+                        bookUI.SetActive(false);
                         telescopeTrigger.SetActive(true);
                     }
 
                     if(trackingInt == 3)
                     {
-                        bookUI.gameObject.SetActive(false);
-                        telescopeView.GetComponent<DragStar>().enabled = true;
+                        bookUI.SetActive(false);
+                        moveableTelescope.GetComponent<DragStar>().enabled = true;
                     }
                     if(trackingInt == 4)
                     {
@@ -157,8 +159,8 @@ public class IntroScene : MonoBehaviour
                         telescopeView.gameObject.SetActive(false);
                         mainCamera.gameObject.SetActive(true);
 
-                        starUI.gameObject.SetActive(true);
-                        journalUI.gameObject.SetActive(true);
+                        starUI.SetActive(true);
+                        journalUI.SetActive(true);
                         introColliders.SetActive(false);
                     }
                     HideDialogue();

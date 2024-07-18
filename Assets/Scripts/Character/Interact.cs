@@ -21,7 +21,7 @@ public class Interact : MonoBehaviour
     
     void Start()
     {
-        characterMovement = FindObjectOfType<CharacterMovement>();
+        characterMovement = this.gameObject.GetComponent<CharacterMovement>();
         characterAnimation = FindObjectOfType<CharacterAnimation>();
         
         //FindObjectOfType<StarInventory>().invstarCount = starCount;
@@ -125,7 +125,7 @@ public class Interact : MonoBehaviour
     //     dialogueScript.ShowDialogue();
     // }
 
-    private IEnumerator HandleDialogue(Collider other)
+    public IEnumerator HandleDialogue(Collider other)
     {
         characterMovement.canMove = false;
         characterMovement.InteractStopMove();
