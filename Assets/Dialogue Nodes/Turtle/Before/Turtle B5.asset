@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Turtle B5
   m_EditorClassIdentifier: 
-  nodeText: Shouldn't they just be able to head towards the water? I mean I can see
-    it pretty clearly.
+  nodeText: Shouldn't they just be able to head towards the water? I mean, I can
+    see it pretty clearly.
   charName: Thalia
-  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}
+  charImage: {fileID: 21300000, guid: a7ccb63ca19cad542acef3eee372ec1d, type: 3}

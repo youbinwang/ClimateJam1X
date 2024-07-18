@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Frog B2
   m_EditorClassIdentifier: 
-  nodeText: 'Hello! I am Thalia. '
-  charName: Thalia
-  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}
+  nodeText: "*sniff sniff*...Mama said I need to get some life experience. That I\u2019m
+    t-too old to still be a t-tadpole.\r\n"
+  charName: Frogert
+  charImage: {fileID: 21300000, guid: dd4ef689abd47de43b9310014028e0ea, type: 3}

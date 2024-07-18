@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: "Ah! Can\u2019t you see? My beautiful love, it\u2019s right here!"
   charName: Motholomew
-  charImage: {fileID: 21300000, guid: 389f557c79ca61f4f8bb3f2047228b60, type: 3}
+  charImage: {fileID: 21300000, guid: 6dc91cefb4e835e4fa3f4042e86a3fe1, type: 3}

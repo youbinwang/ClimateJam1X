@@ -15,4 +15,4 @@ MonoBehaviour:
   nodeText: "Well I\u2019m glad you can see the errors of your ways. I\u2019m going
     back to the observatory now to finally see what the stars look like!"
   charName: Thalia
-  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}
+  charImage: {fileID: 21300000, guid: f0bf3021f8751cc44b441230c948b63e, type: 3}

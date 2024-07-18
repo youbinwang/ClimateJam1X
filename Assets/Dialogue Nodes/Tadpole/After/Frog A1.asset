@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Frog A1
   m_EditorClassIdentifier: 
-  nodeText: 'WOAH! Thank you so much! I feel better. '
-  charName: Frogert
-  charImage: {fileID: 21300000, guid: 51ea95dfc22460b4887ee0d922666ef7, type: 3}
+  nodeText: "Hey, are you alright? What\u2019s going on?"
+  charName: Thalia
+  charImage: {fileID: 21300000, guid: a7ccb63ca19cad542acef3eee372ec1d, type: 3}

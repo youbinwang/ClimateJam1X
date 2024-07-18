@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: ...
   charName: Mr. Mayor
-  charImage: {fileID: 21300000, guid: bddc9c4bc49d4aa4a84d7e81dc15ad90, type: 3}
+  charImage: {fileID: 21300000, guid: 06ba6a1abe819614b950af166d440155, type: 3}

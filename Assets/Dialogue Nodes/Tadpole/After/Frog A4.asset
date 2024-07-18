@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Frog A4
   m_EditorClassIdentifier: 
-  nodeText: 'That''s great! Now... I should head down to the beach. I still see light
-    there. '
-  charName: Thalia
-  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}
+  nodeText: "This is amazing! I\u2019m gonna go tell my mama and then fill out a
+    job application."
+  charName: Frogert
+  charImage: {fileID: 21300000, guid: 9de7acc78a4141b4196b3330bdec4051, type: 3}

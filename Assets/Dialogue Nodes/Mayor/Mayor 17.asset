@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeText: "Would you\u2026 like to join?"
   charName: Thalia
-  charImage: {fileID: 21300000, guid: 91bc929eb0a924f419dc1810bd101d78, type: 3}
+  charImage: {fileID: 21300000, guid: 5a3484c81677ce3409b25c4c8203ca1d, type: 3}
