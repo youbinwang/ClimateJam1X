@@ -57,6 +57,7 @@ public class IntroScene : MonoBehaviour
 
         moveableTelescope.GetComponent<DragStar>().enabled = false;
 
+        introColliders.SetActive(true);
         introDone = false;
 
         ShowDialogue();
@@ -84,6 +85,31 @@ public class IntroScene : MonoBehaviour
 
         if (trackingInt == 0 && dialogueIndex >= Prologue.Length || trackingInt == 1 && dialogueIndex >= Entered.Length || trackingInt == 2 && dialogueIndex >= Looking.Length || trackingInt == 3 && dialogueIndex >= AfterLooking.Length || trackingInt == 4 && dialogueIndex >= PromptTown.Length)
         {
+            Debug.Log("Please work or I'm killing myself");
+            if (trackingInt == 0)
+            {
+                this.gameObject.GetComponent<Transform>().position = insidePosition;
+                introDone = true;
+            }
+
+            if (trackingInt == 2)
+            {
+                bookUI.SetActive(false);
+                telescopeTrigger.SetActive(true);
+            }
+
+            if (trackingInt == 3)
+            {
+                bookUI.SetActive(false);
+                moveableTelescope.GetComponent<DragStar>().enabled = true;
+            }
+            if (trackingInt == 4)
+            {
+                telescopeCamera.gameObject.SetActive(false);
+                telescopeView.gameObject.SetActive(false);
+                mainCamera.gameObject.SetActive(true);
+            }
+            dialogueIndex = 0;
             HideDialogue();
         }
         else if (trackingInt == 0)
@@ -107,8 +133,8 @@ public class IntroScene : MonoBehaviour
             DialogueText.text = AfterLooking[dialogueIndex].GetNodeText(); // gets the text of the dialogue at the index
             if(dialogueIndex == 1)
             {
-                mainCamera.enabled = false;
-                telescopeCamera.enabled = true;
+                mainCamera.gameObject.SetActive(false);
+                telescopeCamera.gameObject.SetActive(true);
                 telescopeView.SetActive(true);
             }
             if(dialogueIndex == 3)
@@ -142,33 +168,34 @@ public class IntroScene : MonoBehaviour
                 {
                     dialogueIndex = 0; // resets dialogue to 0 
 
-                    if(trackingInt == 0)
-                    {
-                        this.gameObject.GetComponent<Transform>().position = insidePosition;
-                        introDone = true;
-                    }
 
-                    if(trackingInt == 2)
-                    {
-                        bookUI.SetActive(false);
-                        telescopeTrigger.SetActive(true);
-                    }
+                    //if(trackingInt == 0)
+                    //{
+                    //    this.gameObject.GetComponent<Transform>().position = insidePosition;
+                    //    introDone = true;
+                    //}
 
-                    if(trackingInt == 3)
-                    {
-                        bookUI.SetActive(false);
-                        moveableTelescope.GetComponent<DragStar>().enabled = true;
-                    }
-                    if(trackingInt == 4)
-                    {
-                        telescopeCamera.gameObject.SetActive(false);
-                        telescopeView.gameObject.SetActive(false);
-                        mainCamera.gameObject.SetActive(true);
+                    //if(trackingInt == 2)
+                    //{
+                    //    bookUI.SetActive(false);
+                    //    telescopeTrigger.SetActive(true);
+                    //}
 
-                        starUI.SetActive(true);
-                        journalUI.SetActive(true);
-                        introColliders.SetActive(false);
-                    }
+                    //if(trackingInt == 3)
+                    //{
+                    //    bookUI.SetActive(false);
+                    //    moveableTelescope.GetComponent<DragStar>().enabled = true;
+                    //}
+                    //if(trackingInt == 4)
+                    //{
+                    //    telescopeCamera.gameObject.SetActive(false);
+                    //    telescopeView.gameObject.SetActive(false);
+                    //    mainCamera.gameObject.SetActive(true);
+
+                    //    starUI.SetActive(true);
+                    //    journalUI.SetActive(true);
+                    //    introColliders.SetActive(false);
+                    //}
                     HideDialogue();
                 }
             }
@@ -178,18 +205,23 @@ public class IntroScene : MonoBehaviour
     public void HideDialogue() // called once it reaches the end of a sequence 
     {
         Dialogue.gameObject.SetActive(false);
+        dialogueIsActive = false;
         dialogueIndex = 0;
         trackingInt++;
+        Debug.Log("Tracking Int: " + trackingInt);
 
         this.gameObject.GetComponent<Interact>().EndDialogue();
 
-        if(trackingInt == 1)
+        //if(trackingInt == 1)
+        //{
+        //    ShowDialogue();
+        //}
+        if(trackingInt > 4)
         {
-            ShowDialogue();
-        }
-        if(trackingInt == 4)
-        {
-            this.gameObject.GetComponent<IntroScene>().enabled = false;
+            starUI.SetActive(true);
+            journalUI.SetActive(true);
+            introColliders.SetActive(false);
+            //this.gameObject.GetComponent<IntroScene>().enabled = false;
         }
     }
 }

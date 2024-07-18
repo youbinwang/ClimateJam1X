@@ -11,6 +11,7 @@ TagManager:
   - Telescope
   - TelescopeCamera
   - Book
+  - IntroPiece
   layers:
   - Default
   - TransparentFX

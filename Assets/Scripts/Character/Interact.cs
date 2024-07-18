@@ -52,6 +52,17 @@ public class Interact : MonoBehaviour
                 other.GetComponent<Character>().QuestDone(); //so the dialogue updates
             }
         }
+
+        if (other.gameObject.CompareTag("IntroPiece"))
+        {
+            characterMovement.canMove = false;
+
+            IntroScene dialogueScript = this.gameObject.GetComponent<IntroScene>();
+            dialogueScript.ShowDialogue();
+
+            ePopup.SetActive(false);
+            other.gameObject.SetActive(false);
+        }
         // if (Input.GetKey(KeyCode.E))
         // {
         //     if (other.gameObject.CompareTag("NPC"))
@@ -95,14 +106,10 @@ public class Interact : MonoBehaviour
                 checkpointStored = true;
             }
 
-            if (other.gameObject.CompareTag("Book"))
+            if (other.gameObject.CompareTag("Book") || other.gameObject.CompareTag("Telescope"))
             {
                 StartCoroutine(HandleDialogue(other));
-            }
-
-            if (other.gameObject.CompareTag("Telescope"))
-            {
-                StartCoroutine(HandleDialogue(other));
+                other.gameObject.SetActive(false);
             }
 
             ePopup.SetActive(false);
