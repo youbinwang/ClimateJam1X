@@ -19,8 +19,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
     
-        Play("Intro Loop");
-        currentAudio = "Intro Loop";
+        Play("Harp");
+        
         // what the above does is basically plays something all the way through. 
     }
 
@@ -70,8 +70,8 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("Fading Out");
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        float speed = 0.0005f;
-        while (s.source.volume > 0)
+        float speed = 0.005f;
+        while (s.volume > 0)
         {
             s.source.volume -= speed;
             yield return new WaitForSeconds(0.1f);
@@ -83,8 +83,8 @@ public class AudioManager : MonoBehaviour
     {
         Debug.Log("Fading In");
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        float speed = 0.0005f;
-        while (s.source.volume < 3)
+        float speed = 0.005f;
+        while (s.volume < 1)
         {
             s.source.volume += speed;
             yield return new WaitForSeconds(0.1f);

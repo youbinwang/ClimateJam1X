@@ -5,7 +5,8 @@ using UnityEngine;
 public class Audiozone : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] public string audioStartName;
+    [SerializeField] public string[] audioStartName;
+    [SerializeField] public string[] audioEndName;
     void Start()
     {
         
@@ -19,8 +20,20 @@ public class Audiozone : MonoBehaviour
 
     public void zonePassThru()
     {
-        FindObjectOfType<AudioManager>().Stop(FindObjectOfType<AudioManager>().currentAudio); // stops current audio
-        FindObjectOfType<AudioManager>().Play(audioStartName);
-        FindObjectOfType<AudioManager>().currentAudio = audioStartName;
+        Debug.Log("Audio Zone Passed through");
+
+        for (int i=0 ; i<audioEndName.Length; i++)
+        {
+            FindObjectOfType<AudioManager>().StopFade(FindObjectOfType<AudioManager>().currentAudio);
+        }
+
+        for (int i = 0; i < audioStartName.Length; i++) {
+            FindObjectOfType<AudioManager>().PlayFade(audioStartName[i]);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        zonePassThru();
     }
 }
