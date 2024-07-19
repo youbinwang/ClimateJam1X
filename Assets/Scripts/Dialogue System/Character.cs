@@ -132,6 +132,7 @@ public class Character : MonoBehaviour
 
     public void HideDialogue() // called once it reaches the end of a sequence 
     {
+        dialogueActive = false; 
         Dialogue.gameObject.SetActive(false);
         dialogueIndex = 0;
         var interact = FindObjectOfType<Interact>();

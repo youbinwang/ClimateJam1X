@@ -24,7 +24,7 @@ public class Audiozone : MonoBehaviour
 
         for (int i=0 ; i<audioEndName.Length; i++)
         {
-            FindObjectOfType<AudioManager>().StopFade(FindObjectOfType<AudioManager>().currentAudio);
+            FindObjectOfType<AudioManager>().StopFade(audioEndName[i]);
         }
 
         for (int i = 0; i < audioStartName.Length; i++) {

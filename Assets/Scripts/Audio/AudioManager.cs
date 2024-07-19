@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-    
+    SetVolZeroStart();
         Play("Harp");
         
         // what the above does is basically plays something all the way through. 
@@ -53,6 +53,26 @@ public class AudioManager : MonoBehaviour
         {
             StopFade(sound.name);
         }
+    }
+    
+    public void SetVolZeroStart() // sets the volumes to zero... at the start
+    {
+
+
+       Sound s = Array.Find(sounds, sound => sound.name == "Route");
+       Sound y = Array.Find(sounds, sound => sound.name == "Town");
+       Sound d =  Array.Find(sounds, sound => sound.name == "Swamp");
+       Sound u =   Array.Find(sounds, sound => sound.name == "Beach");
+       Sound g =  Array.Find(sounds, sound => sound.name == "Mayor Office");
+
+       s.volume = 0;
+       y.volume = 0; 
+       d.volume = 0;
+       u.volume = 0; 
+       g.volume = 0; 
+
+
+
     }
 
 
