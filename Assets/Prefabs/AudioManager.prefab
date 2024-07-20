@@ -48,30 +48,115 @@ MonoBehaviour:
   - name: Town Loop
     loop: 1
     clip: {fileID: 8300000, guid: 057c082d1dca25f4d9c4d80987fbec25, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Town Loop End
     loop: 1
     clip: {fileID: 8300000, guid: 8700b779d151e3546855019ca4860a22, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Intro Loop
     loop: 1
-    clip: {fileID: 0}
-    volume: 1
+    clip: {fileID: 8300000, guid: 26cc281f3653db7489508c043c0d9407, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Moth Over
+    loop: 0
+    clip: {fileID: 8300000, guid: 9ab660921ad861a4695cec0b0bf6f28f, type: 3}
+    volume: 3
     pitch: 1
     source: {fileID: 0}
   - name: Moth Enters
-    loop: 0
+    loop: 1
     clip: {fileID: 8300000, guid: 271ed400fdf7d9e468c7622ef8c6ad2d, type: 3}
-    volume: 2
+    volume: 3
     pitch: 1
     source: {fileID: 0}
-  - name: Moth Over Dialogue
+  - name: Harp
+    loop: 1
+    clip: {fileID: 8300000, guid: 778e64e6d0c9ebb449fab51c0ca000ca, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Route
+    loop: 1
+    clip: {fileID: 8300000, guid: 08d500c6112aa4f46ab50724b105d147, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Town
+    loop: 1
+    clip: {fileID: 8300000, guid: ade6914307ac4dc429e0a03730effea8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Swamp
+    loop: 1
+    clip: {fileID: 8300000, guid: 4c3b786b6a8263844ac956c4710be03d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Beach
+    loop: 1
+    clip: {fileID: 8300000, guid: 254f5690ee0b87a4d880c38ec191e535, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Mayor Office
+    loop: 1
+    clip: {fileID: 8300000, guid: 85385773967f23a46a1873b2ed92bbb6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Frog Enters
+    loop: 1
+    clip: {fileID: 8300000, guid: b6450dce3048fb44297f8cca7db1042d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Frog Over
     loop: 0
-    clip: {fileID: 8300000, guid: 4afd467843f68044b902848f091777d1, type: 3}
-    volume: 2
+    clip: {fileID: 8300000, guid: c8c6b10d4ddcb934e8cf04ee6c6139eb, type: 3}
+    volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Turtle Enters
+    loop: 1
+    clip: {fileID: 8300000, guid: bfdb97f8e0d67a94ca54efdf5336d32e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Turtle Over
+    loop: 0
+    clip: {fileID: 8300000, guid: 068e1d2a122d0dc42a062e3408368237, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Mayor Enters
+    loop: 1
+    clip: {fileID: 8300000, guid: 271ed400fdf7d9e468c7622ef8c6ad2d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Mayor Over
+    loop: 0
+    clip: {fileID: 8300000, guid: 1f69355e31525ef4d927d82f670cff98, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Jumping
+    loop: 0
+    clip: {fileID: 8300000, guid: fd8903453230a164f8346b81bdb577ff, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Landing
+    loop: 0
+    clip: {fileID: 8300000, guid: 7525e45259822444589421e2b4e8bc76, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  currentAudio: 
