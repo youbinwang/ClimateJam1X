@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenuManager : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject controlsUI; 
     private bool isPaused = false;
+    private bool isShowingControls = false; 
 
     void Update()
     {
@@ -12,7 +14,14 @@ public class PauseMenuManager : MonoBehaviour
         {
             if (isPaused)
             {
-                ResumeGame();
+                if (isShowingControls)
+                {
+                    ToggleControls(); 
+                }
+                else
+                {
+                    ResumeGame();
+                }
             }
             else
             {
@@ -24,8 +33,10 @@ public class PauseMenuManager : MonoBehaviour
     public void ResumeGame()
     {
         pauseMenuUI.SetActive(false);
+        controlsUI.SetActive(false); 
         Time.timeScale = 1f;
         isPaused = false;
+        isShowingControls = false;
     }
 
     public void PauseGame()
@@ -38,7 +49,7 @@ public class PauseMenuManager : MonoBehaviour
     public void LoadTitleScreen()
     {
         Time.timeScale = 1f; 
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Title"); 
     }
 
     public void QuitGame()
@@ -47,5 +58,11 @@ public class PauseMenuManager : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    public void ToggleControls()
+    {
+        isShowingControls = !isShowingControls;
+        controlsUI.SetActive(isShowingControls);
     }
 }
