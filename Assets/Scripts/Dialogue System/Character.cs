@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Character : MonoBehaviour
@@ -111,7 +112,7 @@ public class Character : MonoBehaviour
     { 
         if (dialogueActive)
         {
-            if (dialogueActive && Input.GetMouseButtonDown(0))
+            if (dialogueActive && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return)))
             {
                 FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
                 Debug.Log("Played talking sound");
@@ -132,15 +133,30 @@ public class Character : MonoBehaviour
 
     public void HideDialogue() // called once it reaches the end of a sequence 
     {
-        dialogueActive = false; 
-        Dialogue.gameObject.SetActive(false);
-        dialogueIndex = 0;
-        var interact = FindObjectOfType<Interact>();
-        if (interact != null)
+        if (Name == "Mr. Mayor")
         {
-            interact.EndDialogue();
+            if(trackingInt == 0)
+            {
+                EndScene();
+            }
+            else
+            {
+                SceneManager.LoadScene("Credits");
+            }
         }
-        FindObjectOfType<AudioManager>().Stop(EncounterSound); // stops the encounter sound 
+
+        else
+        {
+            dialogueActive = false;
+            Dialogue.gameObject.SetActive(false);
+            dialogueIndex = 0;
+            var interact = FindObjectOfType<Interact>();
+            if (interact != null)
+            {
+                interact.EndDialogue();
+            }
+            FindObjectOfType<AudioManager>().Stop(EncounterSound); // stops the encounter sound 
+        }
     }
 
     public void UpdateJournal()
@@ -180,4 +196,16 @@ public class Character : MonoBehaviour
         }
     }
    
+    void EndScene()
+    {
+        trackingInt = 1;
+        Camera telescopeCamera = player.gameObject.GetComponent<IntroScene>().telescopeCamera;
+        Camera mainCamera = player.gameObject.GetComponent<IntroScene>().mainCamera;
+
+        telescopeCamera.gameObject.SetActive(true);
+        mainCamera.gameObject.SetActive(false);
+
+        dialogueIndex = 0;
+        PlayDialogue();
+    }
 }

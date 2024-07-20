@@ -33,8 +33,8 @@ public class IntroScene : MonoBehaviour
     [SerializeField] private GameObject telescopeTrigger;
     [SerializeField] private GameObject bookUI;
 
-    [SerializeField] private Camera mainCamera;
-    [SerializeField] private Camera telescopeCamera;
+    [SerializeField] public Camera mainCamera;
+    [SerializeField] public Camera telescopeCamera;
     [SerializeField] private GameObject telescopeView;
     [SerializeField] private GameObject moveableTelescope;
 
@@ -154,7 +154,7 @@ public class IntroScene : MonoBehaviour
         if (dialogueIsActive)
         {
             Debug.Log("dialogue working");
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Return))
             {
                 // FindObjectOfType<AudioManager>().Play(TalkingSound); // plays the talking sound 
                 Debug.Log("Played talking sound");
