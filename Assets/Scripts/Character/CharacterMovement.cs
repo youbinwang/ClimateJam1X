@@ -61,7 +61,6 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
-            FindObjectOfType<AudioManager>().Play("Jumping");
         }
 
         if (rb.velocity.y < 0 && !isClimbing)
@@ -89,10 +88,6 @@ public class CharacterMovement : MonoBehaviour
     void CheckGrounded()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
-        if (isGrounded)
-        {
-            FindObjectOfType<AudioManager>().Play("Landed");
-        }
 
         Debug.DrawRay(groundCheck.position, Vector3.down * groundCheckRadius, isGrounded ? Color.green : Color.red);
     }
