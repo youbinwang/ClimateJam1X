@@ -159,4 +159,28 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: Click
+    loop: 0
+    clip: {fileID: 8300000, guid: db22371392c9a5440a7fe69b17c8c0a5, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bing
+    loop: 0
+    clip: {fileID: 8300000, guid: cc8362a6be548aa47ba3f91c500fb254, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Bong
+    loop: 0
+    clip: {fileID: 8300000, guid: 41a7da388154d7945a2f40f9eac5c79d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Star
+    loop: 0
+    clip: {fileID: 8300000, guid: a467bfb0bc0a21d4b87041b5350a0305, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
   currentAudio: 

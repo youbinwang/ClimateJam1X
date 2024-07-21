@@ -68,15 +68,16 @@ public class Journal : MonoBehaviour
                 }
             }
         }
+        FindObjectOfType<AudioManager>().Play("Click");
     }
-    
+
     public void pageLeft()
     {
-        for( int i = 0; i < journalPages.Length; i++)
+        for (int i = 0; i < journalPages.Length; i++)
         {
-            if(i%2 == 0) //checking if the index is even
+            if (i % 2 == 0) //checking if the index is even
             {
-                if (journalPages[i].activeInHierarchy && (i-2) >= 0)
+                if (journalPages[i].activeInHierarchy && (i - 2) >= 0)
                 {
                     journalPages[i].SetActive(false);
                     journalPages[i + 1].SetActive(false);
@@ -94,5 +95,7 @@ public class Journal : MonoBehaviour
         //    journalPages[0].SetActive(true);
         //    journalPages[1].SetActive(true);
         //}
+
+        FindObjectOfType<AudioManager>().Play("Click");
     }
 }

@@ -65,6 +65,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
+            FindObjectOfType<AudioManager>().Play("Bong");
             isDraggable = false;
 
             if(isTelescope)
@@ -75,6 +76,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             else
             {
                 other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+                FindObjectOfType<AudioManager>().Play("Bong");
                 Debug.Log("Connections Shown");
             }
         }
@@ -86,6 +88,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
+            FindObjectOfType<AudioManager>().Play("Bong");
             isDraggable = false;
 
             if (isTelescope)
@@ -97,6 +100,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             else
             {
                 other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
+                FindObjectOfType<AudioManager>().Play("Bong");
                 Debug.Log("Connections Shown");
             }
         }

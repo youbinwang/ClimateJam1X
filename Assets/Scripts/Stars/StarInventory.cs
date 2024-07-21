@@ -18,6 +18,7 @@ public class StarInventory : MonoBehaviour
     public int GetStarCount() // run this when refreshing inventory/add a call to this method in the interact script to update this with the UI 
     {
         Debug.Log("Get Star Count Got");
+        FindObjectOfType<AudioManager>().Play("Star");
         invstarCount = FindObjectOfType<Interact>().starCount; // gets starCount from interact script
         // sets the text to the UI in scene
         starCountUIText.text = invstarCount.ToString();

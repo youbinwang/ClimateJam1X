@@ -14,7 +14,7 @@ public class StarObject : MonoBehaviour
         {
             connections[i].gameObject.SetActive(true);
             Debug.Log("Setting connection " + i + "active");
-
+            
         }
     }
 }

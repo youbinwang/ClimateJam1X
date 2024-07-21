@@ -32,6 +32,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void ResumeGame()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         pauseMenuUI.SetActive(false);
         controlsUI.SetActive(false); 
         Time.timeScale = 1f;
@@ -41,6 +42,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void PauseGame()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -48,12 +50,14 @@ public class PauseMenuManager : MonoBehaviour
 
     public void LoadTitleScreen()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         Time.timeScale = 1f; 
         SceneManager.LoadScene("Title"); 
     }
 
     public void QuitGame()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         Application.Quit();
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -62,6 +66,7 @@ public class PauseMenuManager : MonoBehaviour
 
     public void ToggleControls()
     {
+        FindObjectOfType<AudioManager>().Play("Click");
         isShowingControls = !isShowingControls;
         controlsUI.SetActive(isShowingControls);
     }

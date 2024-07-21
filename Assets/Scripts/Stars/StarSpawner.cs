@@ -33,6 +33,7 @@ public class StarSpawner : MonoBehaviour
                 FindObjectOfType<Interact>().InventoryStars(); // substracts star count in UI text
                 Debug.Log("Star Count:" + FindObjectOfType<Interact>().starCount);
                 Debug.Log("Clone Created");
+                FindObjectOfType<AudioManager>().Play("Click");
               
             }
         }
