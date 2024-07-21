@@ -183,4 +183,46 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
+  - name: FF1
+    loop: 0
+    clip: {fileID: 8300000, guid: 8b0e0e856f967954aa57a71271b214e7, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: FF2
+    loop: 0
+    clip: {fileID: 8300000, guid: a87203ee466d1744b970eb27ea391dfd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: TF1
+    loop: 0
+    clip: {fileID: 8300000, guid: 7bf3b0d89fe89ec4b89f238e11464b44, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: SF1
+    loop: 0
+    clip: {fileID: 8300000, guid: 1e5049f66c90c054eb563f6815192cc3, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: SF2
+    loop: 0
+    clip: {fileID: 8300000, guid: 307d02cb0daa4064290138862b9a461d, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BF1
+    loop: 0
+    clip: {fileID: 8300000, guid: 8ff3f6c49c5911641b0bc4c36cb1584a, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: BF2
+    loop: 0
+    clip: {fileID: 8300000, guid: 6ed11213b9b8bfd4390a91b5a97d9a8b, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
   currentAudio: 
