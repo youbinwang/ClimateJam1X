@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Frog A2
   m_EditorClassIdentifier: 
-  nodeText: I'm... I'm not a frog yet, but I feel like I'm finally getting older!
-  charName: Frogert
-  charImage: {fileID: 21300000, guid: dd4ef689abd47de43b9310014028e0ea, type: 3}
+  nodeText: Wow! It seems like it really had something to do with those lights I
+    took out.
+  charName: Thalia
+  charImage: {fileID: 21300000, guid: f0bf3021f8751cc44b441230c948b63e, type: 3}
