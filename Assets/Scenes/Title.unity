@@ -6091,7 +6091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -238, y: 31}
+  m_AnchoredPosition: {x: -238, y: 21}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163127821
@@ -6114,8 +6114,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "PRODUCTION LEAD/2D Art\nKimberly Hoang\n\n3D MODELS/ANIMATION\nJunyu Huo\n\n2D
-    ART/CHARACTER DESIGN\nAvery Szakacs\n\nNARRATIVE\nPeter Va\u0148o\n\nTECHNICAL
+  m_text: "LEVEL DESIGN/PROGRAMMING\nRobin Wang\nMarcia Chen\n\nNARRATIVE\nAvery
+    Szakacs\nKimberly Hoang\nPeter Va\u0148o\n\n3D MODELS/ANIMATION\nJunyu Huo\n\n\nTECHNICAL
     LEAD/PROGRAMMING\nAnik\n\nLEVEL DESIGN/PROGRAMMING\nRobin\nMarcia\n\nPROGRAMMING\nFarah\n\nAUDIO
     DESIGN\nTomasz"
   m_isRightToLeft: 0
@@ -6157,9 +6157,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -3.8
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 0.73
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -6574,7 +6574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215, y: 26}
+  m_AnchoredPosition: {x: 204, y: 18}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765222486
@@ -6604,12 +6604,12 @@ MonoBehaviour:
     Farah Azim
 
 
-    LEVEL DESIGN/PROGRAMMING
+    CONCEPT/2D
+    ART
 
-    Robin
-    Wang
+    Avery Szakacs
 
-    Marcia Chen
+    Kimberly Hoang
 
 
     AUDIO DESIGN
@@ -6654,9 +6654,9 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -6.97
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 18.69
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
