@@ -91,6 +91,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             if (isTelescope)
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
+                player.GetComponent<IntroScene>().telescopeInstructions.gameObject.SetActive(false);
                 player.GetComponent<IntroScene>().ShowDialogue();
             }
             else

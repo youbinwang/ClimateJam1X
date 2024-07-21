@@ -45,6 +45,8 @@ public class IntroScene : MonoBehaviour
     public bool dialogueIsActive;
 
     public bool introDone;
+
+    [SerializeField] public TextMeshProUGUI telescopeInstructions;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
@@ -216,6 +218,10 @@ public class IntroScene : MonoBehaviour
         //{
         //    ShowDialogue();
         //}
+        if(trackingInt == 3)
+        {
+            telescopeInstructions.gameObject.SetActive(true);
+        }
         if(trackingInt > 4)
         {
             starUI.SetActive(true);
