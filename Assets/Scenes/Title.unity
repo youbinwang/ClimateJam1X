@@ -6114,49 +6114,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PRODUCTION LEAD/2D Art
-
-    Kimberly
-
-
-    3D MODELS/ANIMATION
-
-    John
-
-
-    2D
-    ART
-
-    Avery
-
-
-    NARRATIVE LEAD
-
-    Peter
-
-
-    TECHNICAL LEAD/PROGRAMMING
-
-    Anik
-
-
-    LEVEL
-    DESIGN/PROGRAMMING
-
-    Robin
-
-    Marcia
-
-
-    PROGRAMMING
-
-    Farah
-
-
-    AUDIO
-    DESIGN
-
-    Tomasz'
+  m_text: "PRODUCTION LEAD/2D Art\nKimberly Hoang\n\n3D MODELS/ANIMATION\nJunyu Huo\n\n2D
+    ART/CHARACTER DESIGN\nAvery Szakacs\n\nNARRATIVE\nPeter Va\u0148o\n\nTECHNICAL
+    LEAD/PROGRAMMING\nAnik\n\nLEVEL DESIGN/PROGRAMMING\nRobin\nMarcia\n\nPROGRAMMING\nFarah\n\nAUDIO
+    DESIGN\nTomasz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7956be555d3fd442ab832e9e02211d2, type: 2}
   m_sharedMaterial: {fileID: 3656361360584890621, guid: c7956be555d3fd442ab832e9e02211d2,
@@ -6394,7 +6355,7 @@ RectTransform:
   m_GameObject: {fileID: 1590134765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62897795, y: 0.62897795, z: 0.62897795}
+  m_LocalScale: {x: 1.42459, y: 1.42459, z: 1.42459}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 826100870}
@@ -6405,7 +6366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -43}
+  m_AnchoredPosition: {x: 0, y: -85}
   m_SizeDelta: {x: 1600, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590134767
@@ -6613,7 +6574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 31.00001}
+  m_AnchoredPosition: {x: 215, y: 26}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765222486
@@ -6636,27 +6597,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'TECHNICAL LEAD/PROGRAMMING
+  m_text: 'GAME DESIGN/PROGRAMMING
 
-    Anik
+    Anik Panja
+
+    Farah Azim
 
 
     LEVEL DESIGN/PROGRAMMING
 
     Robin
+    Wang
 
-    Marcia
-
-
-    PROGRAMMING
-
-    Farah
+    Marcia Chen
 
 
-    AUDIO
-    DESIGN
+    AUDIO DESIGN
 
-    Tomasz'
+    Tomasz Edwards'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c7956be555d3fd442ab832e9e02211d2, type: 2}
   m_sharedMaterial: {fileID: 3656361360584890621, guid: c7956be555d3fd442ab832e9e02211d2,
