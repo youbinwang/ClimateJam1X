@@ -146,6 +146,7 @@ public class IntroScene : MonoBehaviour
         }
         else if (trackingInt == 4)
         {
+            telescopeInstructions.gameObject.SetActive(false);
             DialogueText.text = PromptTown[dialogueIndex].GetNodeText();
         }
     }
@@ -218,7 +219,7 @@ public class IntroScene : MonoBehaviour
         //{
         //    ShowDialogue();
         //}
-        if(trackingInt == 3)
+        if(trackingInt == 4)
         {
             telescopeInstructions.gameObject.SetActive(true);
         }
