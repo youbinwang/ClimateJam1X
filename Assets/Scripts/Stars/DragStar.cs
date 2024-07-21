@@ -88,7 +88,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         {
             star.transform.position = other.transform.position; //star snaps to the empty position
             Debug.Log("Snapped");
-            FindObjectOfType<AudioManager>().Play("Bong");
+            
             isDraggable = false;
 
             if (isTelescope)
