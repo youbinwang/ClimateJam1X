@@ -231,8 +231,8 @@ public class IntroScene : MonoBehaviour
             journalUI.SetActive(true);
             introColliders.SetActive(false);
 
-            //townImage.SetActive(false);
-            //endSceneImage.SetActive(true);
+            townImage.SetActive(false);
+            endSceneImage.SetActive(true);
             //this.gameObject.GetComponent<IntroScene>().enabled = false;
         }
     }
