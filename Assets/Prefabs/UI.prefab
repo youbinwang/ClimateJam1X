@@ -2320,7 +2320,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcf95fca203dc714a96344214245ff4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2370,7 +2370,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0, g: 0.03169751, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.07450981, g: 0.14509805, b: 0.24313727, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -7111,6 +7111,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Journal
       objectReference: {fileID: 0}
+    - target: {fileID: 3233382051232704067, guid: 9e7dd8ec81ed7eb428a3e85aba86296e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2a9e04848f642994d97445a4f3bc28e0,
+        type: 3}
     - target: {fileID: 3998635921731614335, guid: 9e7dd8ec81ed7eb428a3e85aba86296e,
         type: 3}
       propertyPath: m_Enabled
@@ -7334,6 +7340,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7923751284868428594, guid: 9e7dd8ec81ed7eb428a3e85aba86296e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939962951387771591, guid: 9e7dd8ec81ed7eb428a3e85aba86296e,
         type: 3}
       propertyPath: m_IsActive
       value: 0

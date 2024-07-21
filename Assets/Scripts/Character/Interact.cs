@@ -178,6 +178,7 @@ public class Interact : MonoBehaviour
     {
         starCount++;
         Debug.Log("Star Count: " + starCount);
+        FindObjectOfType<AudioManager>().Play("Star");
         // FindObjectOfType<StarInventory>().GetStarCount(); // gets star count to the inventory 
         InventoryStars();
     }

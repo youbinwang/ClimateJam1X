@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0d91c1682ebb78949a6082333e4215a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcf95fca203dc714a96344214245ff4f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   star: {fileID: 0}
+  isTelescope: 0
 --- !u!50 &3692066621566477472
 Rigidbody2D:
   serializedVersion: 4

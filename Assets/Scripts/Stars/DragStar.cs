@@ -100,7 +100,7 @@ public class DragStar : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
             else
             {
                 other.gameObject.GetComponent<StarObject>().ShowConnections(); // calls starobject (the star socket object) and has it show the connections once it's snapped
-                FindObjectOfType<AudioManager>().Play("Bong");
+                
                 Debug.Log("Connections Shown");
             }
         }
