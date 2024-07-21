@@ -47,6 +47,9 @@ public class IntroScene : MonoBehaviour
     public bool introDone;
 
     [SerializeField] public TextMeshProUGUI telescopeInstructions;
+
+    [SerializeField] private GameObject townImage;
+    [SerializeField] private GameObject endSceneImage;
     void Start()
     {
         dialogueIndex = 0; // instantiate's index
@@ -87,7 +90,6 @@ public class IntroScene : MonoBehaviour
 
         if (trackingInt == 0 && dialogueIndex >= Prologue.Length || trackingInt == 1 && dialogueIndex >= Entered.Length || trackingInt == 2 && dialogueIndex >= Looking.Length || trackingInt == 3 && dialogueIndex >= AfterLooking.Length || trackingInt == 4 && dialogueIndex >= PromptTown.Length)
         {
-            Debug.Log("Please work or I'm killing myself");
             if (trackingInt == 0)
             {
                 this.gameObject.GetComponent<Transform>().position = insidePosition;
@@ -228,6 +230,9 @@ public class IntroScene : MonoBehaviour
             starUI.SetActive(true);
             journalUI.SetActive(true);
             introColliders.SetActive(false);
+
+            //townImage.SetActive(false);
+            //endSceneImage.SetActive(true);
             //this.gameObject.GetComponent<IntroScene>().enabled = false;
         }
     }
