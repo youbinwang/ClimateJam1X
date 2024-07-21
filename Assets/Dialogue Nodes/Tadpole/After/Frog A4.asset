@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Frog A4
   m_EditorClassIdentifier: 
   nodeText: Good luck with that!
-  charName: Frogert
-  charImage: {fileID: 21300000, guid: 9de7acc78a4141b4196b3330bdec4051, type: 3}
+  charName: Thalia
+  charImage: {fileID: 21300000, guid: f0bf3021f8751cc44b441230c948b63e, type: 3}
