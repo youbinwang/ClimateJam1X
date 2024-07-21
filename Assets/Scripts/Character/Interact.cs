@@ -43,7 +43,11 @@ public class Interact : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        ePopup.SetActive(true);
+        if (other.gameObject.CompareTag("NPC") || other.gameObject.CompareTag("Star") || other.gameObject.CompareTag("Checkpoint") || other.gameObject.CompareTag("Book") || other.gameObject.CompareTag("Telescope"))
+        {
+            ePopup.SetActive(true);
+        }
+
         if (other.gameObject.CompareTag("NPC"))
         {
             if (starCount >= other.GetComponent<Character>().starsReqd)
