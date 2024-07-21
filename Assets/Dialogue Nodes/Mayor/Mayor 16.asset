@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5446e6afd9b24a4c8012f03bb77ebd5, type: 3}
   m_Name: Mayor 16
   m_EditorClassIdentifier: 
-  nodeText: ...
+  nodeText: "Well I\u2019m glad you can see the errors of your ways. I\u2019m going
+    back to the observatory now to finally see what the stars look like!"
   charName: Mr. Mayor
   charImage: {fileID: 21300000, guid: 06ba6a1abe819614b950af166d440155, type: 3}
