@@ -186,8 +186,8 @@ public class Interact : MonoBehaviour
     public void CloseConstellationUI()
     {
         constellationUI.SetActive(false);    
-        closeButton.SetActive(false);
         panel.SetActive(false);
+        closeButton.SetActive(false);
     }
     
     public void EndDialogue()

@@ -60,10 +60,6 @@ public class Character : MonoBehaviour
 
     public void QuestDone() //things to do after the character's quest is complete
     {
-        var interact = FindObjectOfType<Interact>();
-        interact.constellationUI.gameObject.SetActive(true);
-        interact.closeButton.gameObject.SetActive(true);
-        interact.panel.gameObject.SetActive(true);
         trackingInt = 1; // switches the tracking int to 1a
         //if(journalEntries.Length > 0)
         //{
@@ -156,6 +152,12 @@ public class Character : MonoBehaviour
                 interact.EndDialogue();
             }
             FindObjectOfType<AudioManager>().Stop(EncounterSound); // stops the encounter sound 
+            if(trackingInt == 1)
+            {
+                interact.constellationUI.gameObject.SetActive(true);
+                interact.closeButton.gameObject.SetActive(true);
+                interact.panel.gameObject.SetActive(true);
+            }
         }
     }
 
