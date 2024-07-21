@@ -29,7 +29,7 @@ public class CharacterMovement : MonoBehaviour
     private bool isClimbing = false;
     public float climbSpeed = 3f;
     private RaycastHit climbHit;
-    private bool canStartClimbing = false; // Flag to start climbing
+    private bool canStartClimbing = false;
 
     void Start()
     {
@@ -109,13 +109,13 @@ public class CharacterMovement : MonoBehaviour
                 isClimbing = false;
             }
 
-            canStartClimbing = false; // Reset flag after checking
+            canStartClimbing = false;
         }
 
         if (isClimbing)
         {
             RaycastHit surfaceCheck;
-            Vector3 climbDirection = (facingRight) ? Vector3.right : Vector3.left;
+            Vector3 climbDirection = facingRight ? Vector3.right : Vector3.left;
 
             if (!Physics.Raycast(transform.position, climbDirection, out surfaceCheck, 1f, climbableLayer))
             {
