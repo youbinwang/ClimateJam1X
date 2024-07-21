@@ -62,7 +62,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
-    - _BaseHue: 0.16
+    - _BaseHue: 0.154
     - _BaseSaturation: 0
     - _BaseValue: 0.045
     - _BrushVariation: 0.1
